@@ -103,20 +103,43 @@ under `experiments/theorem_audit/results/example_gd_certificate/`.
 
 ## Width required by the sufficient condition for the eleven designs
 
+The finite-width gradient-descent theorem is a sufficient condition. Its width
+condition is the maximum of three terms: a concentration term of order
+`1/lambda_0`, a kernel-drift term of order `1/lambda_0^3`, and a localization
+term of order `1/lambda_0^2`. The table lists them for each of the eleven PDE
+designs at confidence 0.95, with `lambda_0` equal to the smallest eigenvalue
+`lambda_min` of the limiting kernel, which is the most favorable admissible
+choice. `N` is the number of rows of the design.
+
+| Design | N | lambda_min | Concentration term | Drift term | Localization term | Required width |
+|---|---|---|---|---|---|---|
+| Poisson 1D | 7 | 2.46e-04 | 2.16e+06 | 1.25e+18 | 7.58e+12 | 1.25e+18 |
+| Variable elliptic 2D | 13 | 5.20e-03 | 1.39e+06 | 9.34e+16 | 1.28e+12 | 9.34e+16 |
+| Heat 1D | 17 | 1.80e-06 | 2.78e+08 | 1.78e+24 | 1.74e+17 | 1.78e+24 |
+| Transport 1D | 15 | 6.25e-07 | 1.04e+09 | 5.93e+25 | 2.24e+18 | 5.93e+25 |
+| Wave 1D | 22 | 1.57e-07 | 7.69e+09 | 1.39e+28 | 4.12e+19 | 1.39e+28 |
+| Biharmonic 2D | 21 | 3.36e-06 | 1.17e+11 | 4.45e+31 | 2.63e+21 | 4.45e+31 |
+| Stokes 2D | 32 | 1.38e-04 | 6.88e+06 | 1.63e+19 | 8.02e+13 | 1.63e+19 |
+| Weak Poisson 1D | 6 | 4.47e-05 | 3.99e+06 | 2.10e+18 | 3.58e+13 | 2.10e+18 |
+| Nonlocal diffusion 1D | 5 | 9.91e-06 | 1.59e+07 | 1.15e+20 | 5.94e+14 | 1.15e+20 |
+| Integro-differential 1D | 6 | 2.99e-05 | 1.52e+07 | 4.80e+19 | 2.54e+14 | 4.80e+19 |
+| Caputo diffusion 1D | 17 | 1.63e-06 | 2.69e+08 | 1.64e+24 | 1.97e+17 | 1.64e+24 |
+
+The largest trained width is 16,384, so every run of the paper is far below
+the width the condition requires, and the experiments do not test its
+constants. The limiting kernel is evaluated by Gauss-Legendre quadrature in
+float64. The constants of the theorem are maxima over sampled points of the
+sets on which the theorem takes suprema, so each listed width is a lower bound
+of the width the condition requires.
+
+The table is the content of the tracked summary under
+`experiments/theorem_audit/results/width_requirement/`. Recompute it with the
+smoke configuration first and the full one second:
+
 ```bash
 uv run python -m experiments.theorem_audit.width_requirement --config experiments/theorem_audit/configs/width_requirement_smoke.json
 uv run python -m experiments.theorem_audit.width_requirement --config experiments/theorem_audit/configs/width_requirement.json
 ```
-
-For each of the eleven PDE designs this computes the limiting kernel by
-Gauss-Legendre quadrature, its smallest eigenvalue, the constants of the
-finite-width gradient-descent theorem, and the three width terms of its
-sufficient condition at confidence 0.95, and compares the result with the
-largest trained width (16,384). The constants `R_K`, `A_0`, `B_*`, `L_*` are
-maxima over sampled points of the sets on which the theorem takes suprema, so
-the reported width is a lower bound of the width the condition requires. The
-summary is tracked under `experiments/theorem_audit/results/width_requirement/`.
-The smoke configuration takes a few minutes and the full one about ten.
 
 ## Weak-direction share of the two-row controls
 
