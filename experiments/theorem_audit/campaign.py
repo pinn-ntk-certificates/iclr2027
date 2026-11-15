@@ -51,8 +51,14 @@ def prepare(args):
             config['output_dir'] = f'results/{kind}'
             save(destination / f'{kind}.json', config)
             configs[kind] = f'{kind}.json'
-    freeze = subprocess.run([sys.executable, '-m', 'pip', 'freeze'], text=True, capture_output=True, check=True)
-    (destination / 'environment.freeze.txt').write_text(freeze.stdout)
+    freeze = subprocess.run([sys.executable, '-m', 'pip', 'freeze'], text=True, capture_output=True)
+    if freeze.returncode == 0:
+        frozen = freeze.stdout
+    else:
+        # Locked uv environments ship without pip; list the installed distributions directly.
+        from importlib import metadata
+        frozen = ''.join(sorted(f"{d.metadata['Name']}=={d.version}\n" for d in metadata.distributions()))
+    (destination / 'environment.freeze.txt').write_text(frozen)
     git = subprocess.run(['git','rev-parse','HEAD'], cwd=ROOT, text=True, capture_output=True)
     diff = subprocess.run(['git','diff','--binary','HEAD'], cwd=ROOT, capture_output=True)
     (destination / 'source_changes.patch').write_bytes(diff.stdout)

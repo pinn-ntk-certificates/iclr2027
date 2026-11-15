@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "output_dir": "experiments/theorem_audit/results/example_gd_certificate",
+  "gamma": "1",
+  "domain_half_width": "1",
+  "hidden_weight_bound": "0.1",
+  "hidden_bias_low": "1",
+  "hidden_bias_high": "2",
+  "output_weight_bound": "0.1",
+  "tube_radius": "0.1",
+  "delta": "0.05",
+  "target_norm": "0",
+  "interval_decimal_digits": 50,
+  "report_decimal_digits": 30,
+  "check_samples": 200000,
+  "check_seed": 0,
+  "check_quadrature_nodes": 48,
+  "reported": {
+    "lambda0_lower": "0.51308",
+    "R_K": "1.0125",
+    "B_star_squared": "1.05",
+    "L_star_squared_exact": "30839/12150",
+    "L_star_squared": "2.5382",
+    "r_hat_upper": "0.32936",
+    "width_terms_upper": ["212.613", "1355.980", "692.252"],
+    "width": 1356,
+    "eta_max": "10/21",
+    "r_hat_rounded": "0.32936",
+    "second_term_with_rounded_r_hat": "1356.02",
+    "width_with_rounded_r_hat": 1357
+  }
+}

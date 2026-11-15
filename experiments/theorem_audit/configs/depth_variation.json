@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "output_dir": "experiments/theorem_audit/results/depth_variation",
+  "problems": ["poisson_1d", "heat_1d"],
+  "depths": [1, 2, 3],
+  "widths": [16, 64, 256, 1024],
+  "seeds": [0, 1, 2, 3, 4],
+  "bias_scale": 1.0,
+  "steps": 3000,
+  "checkpoint_every": 100,
+  "learning_rate_factor": 0.2,
+  "gap_fraction": 0.5,
+  "processes": 6,
+  "threads_per_process": 1
+}

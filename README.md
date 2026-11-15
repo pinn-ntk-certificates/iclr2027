@@ -81,10 +81,74 @@ uv run python -m experiments.theorem_audit.nonlinear_kernel_variance --config ex
 
 The first records the loss at every gradient step on a two-row design and
 compares the worst per-step ratio with the frozen-kernel factor; the second
-measures the concentration rates discussed in the nonlinear-constraint
-appendix. Their summaries are tracked under
+is a supplementary check that the paper does not report: it measures how the
+variance of a tangent Gram entry scales with width for a linear row and for a
+product of two linear rows. Their summaries are tracked under
 `experiments/theorem_audit/results/per_iterate_monotonicity/` and
 `experiments/theorem_audit/results/nonlinear_kernel_variance/`.
+
+## Worked example of the width condition
+
+```bash
+uv run python -m experiments.theorem_audit.example_gd_certificate --config experiments/theorem_audit/configs/example_gd_certificate_smoke.json
+uv run python -m experiments.theorem_audit.example_gd_certificate --config experiments/theorem_audit/configs/example_gd_certificate.json
+```
+
+This recomputes every constant of the worked single-row example of the width
+condition: the gap bound, `R_K`, `B_*^2`, `L_*^2`, the residual bound, the
+three width terms, the integer width 1356, and the step bound 10/21. Rational
+constants are exact and transcendental ones are enclosed by outward-rounded
+interval arithmetic (`mpmath`, pinned in `uv.lock`). The summary is tracked
+under `experiments/theorem_audit/results/example_gd_certificate/`.
+
+## Width required by the sufficient condition for the eleven designs
+
+```bash
+uv run python -m experiments.theorem_audit.width_requirement --config experiments/theorem_audit/configs/width_requirement_smoke.json
+uv run python -m experiments.theorem_audit.width_requirement --config experiments/theorem_audit/configs/width_requirement.json
+```
+
+For each of the eleven PDE designs this computes the limiting kernel by
+Gauss-Legendre quadrature, its smallest eigenvalue, the constants of the
+finite-width gradient-descent theorem, and the three width terms of its
+sufficient condition at confidence 0.95, and compares the result with the
+largest trained width (16,384). The constants `R_K`, `A_0`, `B_*`, `L_*` are
+maxima over sampled points of the sets on which the theorem takes suprema, so
+the reported width is a lower bound of the width the condition requires. The
+summary is tracked under `experiments/theorem_audit/results/width_requirement/`.
+The smoke configuration takes a few minutes and the full one about ten.
+
+## Weak-direction share of the two-row controls
+
+```bash
+uv run python -m experiments.theorem_audit.weak_direction_share --config experiments/theorem_audit/configs/weak_direction_share_smoke.json
+uv run python -m experiments.theorem_audit.weak_direction_share --config experiments/theorem_audit/configs/weak_direction_share.json
+```
+
+For each control family at `epsilon = 0.01` and width 16,384 this evaluates the
+initial kernel and residual of the contrast control at the five campaign seeds,
+the share of the residual in the weak eigendirection, and the frozen-kernel
+prediction of the final-to-initial loss ratio, next to the observed median of
+the tracked control aggregate. It explains the different final losses of
+families with similar condition numbers. The summary is tracked under
+`experiments/theorem_audit/results/weak_direction_share/`.
+
+## Depth variation
+
+```bash
+uv run python -m experiments.theorem_audit.depth_variation --config experiments/theorem_audit/configs/depth_variation_smoke.json
+uv run python -m experiments.theorem_audit.depth_variation --config experiments/theorem_audit/configs/depth_variation.json
+```
+
+This trains networks with `H = 1, 2, 3` hidden layers of uniform width (16 to
+1,024) on the Poisson 1D and heat 1D designs with the initialization, loss
+scaling, step-size rule and 3,000 steps of the main campaign, five seeds per
+cell. Per run it records the smallest eigenvalue of the initial Gram matrix in
+total and per layer block, the largest relative kernel drift over the saved
+checkpoints, the smallest ratio of the Gram gap to its initial value, the
+discrepancy from the frozen-kernel recursion, and the loss ratio. No theorem of
+the paper covers `H >= 2`; these are observations at the configured settings.
+The summary is tracked under `experiments/theorem_audit/results/depth_variation/`.
 
 ## The broad campaign
 

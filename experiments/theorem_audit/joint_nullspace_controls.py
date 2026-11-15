@@ -672,7 +672,7 @@ def render_tex(data: dict[str, Any]) -> str:
                 f"initial kernels ({sample['cases']} cases, {sample['epsilon_values']} "
                 f"values of $\\epsilon$, {sample['widths']} widths, and {sample['seeds']} "
                 "seeds) in float64.  The parenthesized counts below are agreements with "
-                "the exact coefficient-design rank $r_\\star$; $r_\\tau$ is numerical "
+                "the exact coefficient-design rank $r_\\star$. Here $r_\\tau$ is the numerical "
                 "rank at relative tolerance $\\tau$, and "
                 "$\\rho_z=\\|Kz\\|/(\\|K\\|\\|z\\|)$.  The displayed rank set records "
                 "all values observed over the configured widths and seeds."
@@ -696,7 +696,7 @@ def render_tex(data: dict[str, Any]) -> str:
                 f"The predicted incompatible loss floor was {_scientific_tex(floor)}. "
                 f"Across all {checkpoint_count} saved steps, the largest error in the "
                 "predicted paired loss offset was "
-                f"{_scientific_tex(maximum_checkpoint_offset_error)}; the largest final "
+                f"{_scientific_tex(maximum_checkpoint_offset_error)}, and the largest final "
                 "paired parameter difference was "
                 f"{_scientific_tex(maximum_final_parameter_difference)}."
             ),
@@ -713,7 +713,7 @@ def render_tex(data: dict[str, Any]) -> str:
             (
                 r"These controls diagnose the exact stored finite prediction maps.  "
                 r"The weak and nonlocal rows use fixed 16- and 18-node quadrature, "
-                r"respectively; they do not establish continuum discretization error.  "
+                r"respectively, and do not establish continuum discretization error.  "
                 r"Numerical rank depends on the displayed tolerance, and the GD runs do "
                 r"not certify the theorem's deterministic width or $B_*$ step-size bounds."
             ),

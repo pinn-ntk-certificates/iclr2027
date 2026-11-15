@@ -1,0 +1,1529 @@
+{
+  "schema_version": 1,
+  "config": {
+    "schema_version": 1,
+    "output_dir": "experiments/theorem_audit/results/weak_direction_share",
+    "families": [
+      "pointwise_poisson",
+      "vector_stokes",
+      "weak_poisson",
+      "nonlocal_diffusion",
+      "weak_boundary",
+      "nonlocal_boundary"
+    ],
+    "epsilons": [
+      0.01
+    ],
+    "target_mode": "contrast",
+    "contrast_amplitude": 0.5,
+    "width": 16384,
+    "maximum_width_initialization_bank": 16384,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "steps": 3000,
+    "learning_rate_factor": 0.2,
+    "threads": 1,
+    "observed_aggregate": "experiments/theorem_audit/data/compatible_rank_convergence_conditioning.json",
+    "observed_panel": "conditioning_width_16384"
+  },
+  "config_path": "experiments/theorem_audit/configs/weak_direction_share.json",
+  "config_sha256": "738611d924bb0062518dbfd58953d013526553ca9327124f2cad6ea88f0b8d11",
+  "declared_cells": 30,
+  "found_cells": 30,
+  "cells": [
+    {
+      "family": "pointwise_poisson",
+      "epsilon": 0.01,
+      "seed": 0,
+      "problem_name": "pointwise_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.165523617929823,
+          0.16637924356955658
+        ],
+        [
+          0.16637924356955658,
+          0.16725716969249943
+        ]
+      ],
+      "initial_error": [
+        -0.48008675306692494,
+        -1.1899709093926527
+      ],
+      "initial_loss": 1.6465140556711195,
+      "eigenvalues_ascending": [
+        8.892461983878164e-06,
+        0.33277189516033856
+      ],
+      "lambda_min": 8.892461983878164e-06,
+      "lambda_max": 0.33277189516033856,
+      "relative_gap": 2.6722394869294878e-05,
+      "condition_number": 37421.795647105,
+      "shares_ascending": [
+        0.15116021245086964,
+        0.8488397875491303
+      ],
+      "weak_share": 0.15116021245086964,
+      "direction_factors": [
+        0.9378792304502189,
+        0.0
+      ],
+      "weak_direction_factor": 0.9378792304502189,
+      "weak_direction_decrease": 0.062120769549781074,
+      "predicted_final_to_initial_loss_ratio": 0.1417700237281132
+    },
+    {
+      "family": "pointwise_poisson",
+      "epsilon": 0.01,
+      "seed": 1,
+      "problem_name": "pointwise_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.16704999300020282,
+          0.1679044948250577
+        ],
+        [
+          0.1679044948250577,
+          0.16878109370281533
+        ]
+      ],
+      "initial_error": [
+        -0.6448065105751498,
+        -1.35706865639907
+      ],
+      "initial_loss": 2.2574107742608778,
+      "eigenvalues_ascending": [
+        8.81757833322283e-06,
+        0.33582226912468494
+      ],
+      "lambda_min": 8.81757833322283e-06,
+      "lambda_max": 0.33582226912468494,
+      "relative_gap": 2.625668141724401e-05,
+      "condition_number": 38085.54417479631,
+      "shares_ascending": [
+        0.11074421863591799,
+        0.889255781364082
+      ],
+      "weak_share": 0.11074421863591799,
+      "direction_factors": [
+        0.9389281067637816,
+        0.0
+      ],
+      "weak_direction_factor": 0.9389281067637816,
+      "weak_direction_decrease": 0.06107189323621842,
+      "predicted_final_to_initial_loss_ratio": 0.10398085953885677
+    },
+    {
+      "family": "pointwise_poisson",
+      "epsilon": 0.01,
+      "seed": 2,
+      "problem_name": "pointwise_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.1613817932990744,
+          0.16222890273074303
+        ],
+        [
+          0.16222890273074303,
+          0.16309824941153359
+        ]
+      ],
+      "initial_error": [
+        -0.38509943068169217,
+        -1.0945562675567866
+      ],
+      "initial_loss": 1.3463549943592072,
+      "eigenvalues_ascending": [
+        8.848528940619271e-06,
+        0.32447119418166737
+      ],
+      "lambda_min": 8.848528940619271e-06,
+      "lambda_max": 0.32447119418166737,
+      "relative_gap": 2.727061477039805e-05,
+      "condition_number": 36669.50702869702,
+      "shares_ascending": [
+        0.1848648580297447,
+        0.8151351419702554
+      ],
+      "weak_share": 0.1848648580297447,
+      "direction_factors": [
+        0.9366460348445816,
+        0.0
+      ],
+      "weak_direction_factor": 0.9366460348445816,
+      "weak_direction_decrease": 0.06335396515541836,
+      "predicted_final_to_initial_loss_ratio": 0.17315293625566688
+    },
+    {
+      "family": "pointwise_poisson",
+      "epsilon": 0.01,
+      "seed": 3,
+      "problem_name": "pointwise_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.16524976095236757,
+          0.16610606463326347
+        ],
+        [
+          0.16610606463326347,
+          0.16698461949850094
+        ]
+      ],
+      "initial_error": [
+        -0.34929021893501416,
+        -1.0585969951031857
+      ],
+      "initial_loss": 1.2426312550851644,
+      "eigenvalues_ascending": [
+        8.86068867177181e-06,
+        0.3322255197621967
+      ],
+      "lambda_min": 8.86068867177181e-06,
+      "lambda_max": 0.3322255197621967,
+      "relative_gap": 2.667070452057443e-05,
+      "condition_number": 37494.32262760722,
+      "shares_ascending": [
+        0.20034555715057167,
+        0.7996544428494284
+      ],
+      "weak_share": 0.20034555715057167,
+      "direction_factors": [
+        0.9379955892414308,
+        0.0
+      ],
+      "weak_direction_factor": 0.9379955892414308,
+      "weak_direction_decrease": 0.06200441075856922,
+      "predicted_final_to_initial_loss_ratio": 0.18792324893135323
+    },
+    {
+      "family": "pointwise_poisson",
+      "epsilon": 0.01,
+      "seed": 4,
+      "problem_name": "pointwise_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.164278928122915,
+          0.16512094389423854
+        ],
+        [
+          0.16512094389423854,
+          0.16598493217147503
+        ]
+      ],
+      "initial_error": [
+        -0.3732126254817293,
+        -1.0806960283271685
+      ],
+      "initial_loss": 1.3071915694610816,
+      "eigenvalues_ascending": [
+        8.78299641636493e-06,
+        0.33025507729797365
+      ],
+      "lambda_min": 8.78299641636493e-06,
+      "lambda_max": 0.33025507729797365,
+      "relative_gap": 2.6594584065820265e-05,
+      "condition_number": 37601.6409027135,
+      "shares_ascending": [
+        0.18942512297679445,
+        0.8105748770232054
+      ],
+      "weak_share": 0.18942512297679445,
+      "direction_factors": [
+        0.9381669682829427,
+        0.0
+      ],
+      "weak_direction_factor": 0.9381669682829427,
+      "weak_direction_decrease": 0.06183303171705734,
+      "predicted_final_to_initial_loss_ratio": 0.17771239333976283
+    },
+    {
+      "family": "vector_stokes",
+      "epsilon": 0.01,
+      "seed": 0,
+      "problem_name": "vector_stokes__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.19526343266400706,
+          0.1950799285943898
+        ],
+        [
+          0.1950799285943898,
+          0.19491715436660434
+        ]
+      ],
+      "initial_error": [
+        0.5550247362257335,
+        -0.1567621344183776
+      ],
+      "initial_loss": 0.3326268246098505,
+      "eigenvalues_ascending": [
+        1.028808789897695e-05,
+        0.39017029894271243
+      ],
+      "lambda_min": 1.028808789897695e-05,
+      "lambda_max": 0.39017029894271243,
+      "relative_gap": 2.6368198519609818e-05,
+      "condition_number": 37924.47175548637,
+      "shares_ascending": [
+        0.76119670485413,
+        0.2388032951458702
+      ],
+      "weak_share": 0.76119670485413,
+      "direction_factors": [
+        0.9386768420444966,
+        0.0
+      ],
+      "weak_direction_factor": 0.9386768420444966,
+      "weak_direction_decrease": 0.06132315795550336,
+      "predicted_final_to_initial_loss_ratio": 0.7145177190871516
+    },
+    {
+      "family": "vector_stokes",
+      "epsilon": 0.01,
+      "seed": 1,
+      "problem_name": "vector_stokes__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.1958095271271767,
+          0.19561505613731325
+        ],
+        [
+          0.19561505613731325,
+          0.19544136184203792
+        ]
+      ],
+      "initial_error": [
+        0.5000012322293359,
+        -0.20608115310068098
+      ],
+      "initial_loss": 0.2924706738941606,
+      "eigenvalues_ascending": [
+        1.0301732254122675e-05,
+        0.3912405872369605
+      ],
+      "lambda_min": 1.0301732254122675e-05,
+      "lambda_max": 0.3912405872369605,
+      "relative_gap": 2.6330939555315826e-05,
+      "condition_number": 37978.13586937177,
+      "shares_ascending": [
+        0.8519776363294452,
+        0.14802236367055488
+      ],
+      "weak_share": 0.8519776363294452,
+      "direction_factors": [
+        0.9387607845868691,
+        0.0
+      ],
+      "weak_direction_factor": 0.9387607845868691,
+      "weak_direction_decrease": 0.06123921541313093,
+      "predicted_final_to_initial_loss_ratio": 0.7998031943310963
+    },
+    {
+      "family": "vector_stokes",
+      "epsilon": 0.01,
+      "seed": 2,
+      "problem_name": "vector_stokes__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.19618476466008117,
+          0.19600301808810425
+        ],
+        [
+          0.19600301808810425,
+          0.19584253993917972
+        ]
+      ],
+      "initial_error": [
+        0.3349655013452465,
+        -0.3723151388387613
+      ],
+      "initial_loss": 0.2508204496999984,
+      "eigenvalues_ascending": [
+        1.0559520241829046e-05,
+        0.39201674507901907
+      ],
+      "lambda_min": 1.0559520241829046e-05,
+      "lambda_max": 0.39201674507901907,
+      "relative_gap": 2.693640099404569e-05,
+      "condition_number": 37124.4844558503,
+      "shares_ascending": [
+        0.9972649190086582,
+        0.0027350809913419664
+      ],
+      "weak_share": 0.9972649190086582,
+      "direction_factors": [
+        0.9373976404093032,
+        0.0
+      ],
+      "weak_direction_factor": 0.9373976404093032,
+      "weak_direction_decrease": 0.06260235959069682,
+      "predicted_final_to_initial_loss_ratio": 0.9348337819416911
+    },
+    {
+      "family": "vector_stokes",
+      "epsilon": 0.01,
+      "seed": 3,
+      "problem_name": "vector_stokes__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.19397036914238328,
+          0.19377130034595455
+        ],
+        [
+          0.19377130034595455,
+          0.1935927854025671
+        ]
+      ],
+      "initial_error": [
+        0.20317420645661552,
+        -0.506700799809537
+      ],
+      "initial_loss": 0.2980254586968999,
+      "eigenvalues_ascending": [
+        1.0184956343375906e-05,
+        0.387552969588607
+      ],
+      "lambda_min": 1.0184956343375906e-05,
+      "lambda_max": 0.387552969588607,
+      "relative_gap": 2.6280165919480326e-05,
+      "condition_number": 38051.5101412942,
+      "shares_ascending": [
+        0.8457874000350689,
+        0.15421259996493145
+      ],
+      "weak_share": 0.8457874000350689,
+      "direction_factors": [
+        0.9388751870765996,
+        0.0
+      ],
+      "weak_direction_factor": 0.9388751870765996,
+      "weak_direction_decrease": 0.06112481292340044,
+      "predicted_final_to_initial_loss_ratio": 0.794088803434956
+    },
+    {
+      "family": "vector_stokes",
+      "epsilon": 0.01,
+      "seed": 4,
+      "problem_name": "vector_stokes__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.19557149724225786,
+          0.19537348993906742
+        ],
+        [
+          0.19537348993906742,
+          0.19519633503482653
+        ]
+      ],
+      "initial_error": [
+        0.36499889473830693,
+        -0.3438001275743465
+      ],
+      "initial_loss": 0.2514227208803226,
+      "eigenvalues_ascending": [
+        1.0336149738804368e-05,
+        0.39075749612734556
+      ],
+      "lambda_min": 1.0336149738804368e-05,
+      "lambda_max": 0.39075749612734556,
+      "relative_gap": 2.64515712206219e-05,
+      "condition_number": 37804.93762201885,
+      "shares_ascending": [
+        0.9990773909164051,
+        0.0009226090835947245
+      ],
+      "weak_share": 0.9990773909164051,
+      "direction_factors": [
+        0.938489034793962,
+        0.0
+      ],
+      "weak_direction_factor": 0.938489034793962,
+      "weak_direction_decrease": 0.06151096520603805,
+      "predicted_final_to_initial_loss_ratio": 0.9376231762856069
+    },
+    {
+      "family": "weak_poisson",
+      "epsilon": 0.01,
+      "seed": 0,
+      "problem_name": "weak_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.4538628294324978,
+          0.4538441810600614
+        ],
+        [
+          0.4538441810600614,
+          0.4538362302435088
+        ]
+      ],
+      "initial_error": [
+        0.9801607531257388,
+        0.27867712854710386
+      ],
+      "initial_loss": 1.0383760439432745,
+      "eigenvalues_ascending": [
+        5.348583074077373e-06,
+        0.9076937110929324
+      ],
+      "lambda_min": 5.348583074077373e-06,
+      "lambda_max": 0.9076937110929324,
+      "relative_gap": 5.892497666021363e-06,
+      "condition_number": 169707.32220505128,
+      "shares_ascending": [
+        0.2369341055950606,
+        0.7630658944049394
+      ],
+      "weak_share": 0.2369341055950606,
+      "direction_factors": [
+        0.9859575174437573,
+        0.0
+      ],
+      "weak_direction_factor": 0.9859575174437573,
+      "weak_direction_decrease": 0.014042482556242741,
+      "predicted_final_to_initial_loss_ratio": 0.23360696255026298
+    },
+    {
+      "family": "weak_poisson",
+      "epsilon": 0.01,
+      "seed": 1,
+      "problem_name": "weak_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.4519260394394584,
+          0.4519087044721964
+        ],
+        [
+          0.4519087044721964,
+          0.45190229136694626
+        ]
+      ],
+      "initial_error": [
+        1.3372920845995695,
+        0.6356459507345713
+      ],
+      "initial_loss": 2.192395894217919,
+      "eigenvalues_ascending": [
+        5.460775009041852e-06,
+        0.9038228700313957
+      ],
+      "lambda_min": 5.460775009041852e-06,
+      "lambda_max": 0.9038228700313957,
+      "relative_gap": 6.041864163995057e-06,
+      "condition_number": 165511.83092781928,
+      "shares_ascending": [
+        0.1122677993610822,
+        0.8877322006389179
+      ],
+      "weak_share": 0.1122677993610822,
+      "direction_factors": [
+        0.9856041342925086,
+        0.0
+      ],
+      "weak_direction_factor": 0.9856041342925086,
+      "weak_direction_decrease": 0.014395865707491406,
+      "predicted_final_to_initial_loss_ratio": 0.11065160719820447
+    },
+    {
+      "family": "weak_poisson",
+      "epsilon": 0.01,
+      "seed": 2,
+      "problem_name": "weak_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.44367392756816026,
+          0.44365541414144677
+        ],
+        [
+          0.44365541414144677,
+          0.44364753093329706
+        ]
+      ],
+      "initial_error": [
+        0.8329402412587175,
+        0.13121835218825756
+      ],
+      "initial_loss": 0.7110077014591321,
+      "eigenvalues_ascending": [
+        5.31491296329456e-06,
+        0.887316143588494
+      ],
+      "lambda_min": 5.31491296329456e-06,
+      "lambda_max": 0.887316143588494,
+      "relative_gap": 5.989875200286483e-06,
+      "condition_number": 166948.38649596108,
+      "shares_ascending": [
+        0.3462645210111336,
+        0.6537354789888664
+      ],
+      "weak_share": 0.3462645210111336,
+      "direction_factors": [
+        0.9857271195510658,
+        0.0
+      ],
+      "weak_direction_factor": 0.9857271195510658,
+      "weak_direction_decrease": 0.014272880448934155,
+      "predicted_final_to_initial_loss_ratio": 0.34132232889903424
+    },
+    {
+      "family": "weak_poisson",
+      "epsilon": 0.01,
+      "seed": 3,
+      "problem_name": "weak_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.45182074993125515,
+          0.45180093042012404
+        ],
+        [
+          0.45180093042012404,
+          0.4517918759309881
+        ]
+      ],
+      "initial_error": [
+        0.7441810305693892,
+        0.043588716267922156
+      ],
+      "initial_loss": 0.5557053824452036,
+      "eigenvalues_ascending": [
+        5.382280335169964e-06,
+        0.903607243581908
+      ],
+      "lambda_min": 5.382280335169964e-06,
+      "lambda_max": 0.903607243581908,
+      "relative_gap": 5.956437792413606e-06,
+      "condition_number": 167885.5777313155,
+      "shares_ascending": [
+        0.44161166206317404,
+        0.5583883379368263
+      ],
+      "weak_share": 0.44161166206317404,
+      "direction_factors": [
+        0.9858062272975452,
+        0.0
+      ],
+      "weak_direction_factor": 0.9858062272975452,
+      "weak_direction_decrease": 0.01419377270245481,
+      "predicted_final_to_initial_loss_ratio": 0.4353435265090961
+    },
+    {
+      "family": "weak_poisson",
+      "epsilon": 0.01,
+      "seed": 4,
+      "problem_name": "weak_poisson__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.44868705480297666,
+          0.4486652552073422
+        ],
+        [
+          0.4486652552073422,
+          0.44865409367132353
+        ]
+      ],
+      "initial_error": [
+        0.747883588942619,
+        0.04718994748687266
+      ],
+      "initial_loss": 0.5615567537535061,
+      "eigenvalues_ascending": [
+        5.318727122283207e-06,
+        0.8973358297471778
+      ],
+      "lambda_min": 5.318727122283207e-06,
+      "lambda_max": 0.8973358297471778,
+      "relative_gap": 5.927242561775055e-06,
+      "condition_number": 168712.51506544152,
+      "shares_ascending": [
+        0.43713401378912103,
+        0.5628659862108788
+      ],
+      "weak_share": 0.43713401378912103,
+      "direction_factors": [
+        0.9858753038982446,
+        0.0
+      ],
+      "weak_direction_factor": 0.9858753038982446,
+      "weak_direction_decrease": 0.014124696101755374,
+      "predicted_final_to_initial_loss_ratio": 0.43095962868860915
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "epsilon": 0.01,
+      "seed": 0,
+      "problem_name": "nonlocal_diffusion__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.004576081798109967,
+          0.0045302626427967925
+        ],
+        [
+          0.0045302626427967925,
+          0.004484905805248016
+        ]
+      ],
+      "initial_error": [
+        0.43193980974284946,
+        -0.2760309356999065
+      ],
+      "initial_loss": 0.2627650767040549,
+      "eigenvalues_ascending": [
+        1.7888685979565444e-09,
+        0.009060985814489384
+      ],
+      "lambda_min": 1.7888685979565444e-09,
+      "lambda_max": 0.009060985814489384,
+      "relative_gap": 1.9742538335022798e-07,
+      "condition_number": 5065204.80310287,
+      "shares_ascending": [
+        0.9516101303695725,
+        0.04838986963042729
+      ],
+      "weak_share": 0.9516101303695725,
+      "direction_factors": [
+        0.9995262912968719,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995262912968719,
+      "weak_direction_decrease": 0.0004737087031281284,
+      "predicted_final_to_initial_loss_ratio": 0.9511593443688315
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "epsilon": 0.01,
+      "seed": 1,
+      "problem_name": "nonlocal_diffusion__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.0045701643662985495,
+          0.004524413320495638
+        ],
+        [
+          0.004524413320495638,
+          0.004479123826398084
+        ]
+      ],
+      "initial_error": [
+        0.46374199402447164,
+        -0.24458154275652577
+      ],
+      "initial_loss": 0.27487676807895534,
+      "eigenvalues_ascending": [
+        1.7911870892756143e-09,
+        0.009049286401509544
+      ],
+      "lambda_min": 1.7911870892756143e-09,
+      "lambda_max": 0.009049286401509544,
+      "relative_gap": 1.9793683278460718e-07,
+      "condition_number": 5052116.808841686,
+      "shares_ascending": [
+        0.9097694859283845,
+        0.09023051407161554
+      ],
+      "weak_share": 0.9097694859283845,
+      "direction_factors": [
+        0.9995250644002099,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995250644002099,
+      "weak_direction_decrease": 0.0004749355997900606,
+      "predicted_final_to_initial_loss_ratio": 0.9093374040119144
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "epsilon": 0.01,
+      "seed": 2,
+      "problem_name": "nonlocal_diffusion__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.004523255592266567,
+          0.00447798049768983
+        ],
+        [
+          0.00447798049768983,
+          0.004433162002904956
+        ]
+      ],
+      "initial_error": [
+        0.43694944165104166,
+        -0.2710661373948928
+      ],
+      "initial_loss": 0.26440166540134397,
+      "eigenvalues_ascending": [
+        1.7287465512924594e-09,
+        0.008956415866424972
+      ],
+      "lambda_min": 1.7287465512924594e-09,
+      "lambda_max": 0.008956415866424972,
+      "relative_gap": 1.9301767326068825e-07,
+      "condition_number": 5180872.731013638,
+      "shares_ascending": [
+        0.9457063214932809,
+        0.054293678506718804
+      ],
+      "weak_share": 0.9457063214932809,
+      "direction_factors": [
+        0.9995368648465669,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995368648465669,
+      "weak_direction_decrease": 0.00046313515343310296,
+      "predicted_final_to_initial_loss_ratio": 0.9452683316509735
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "epsilon": 0.01,
+      "seed": 3,
+      "problem_name": "nonlocal_diffusion__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.00456487818820138,
+          0.0045191715271659695
+        ],
+        [
+          0.0045191715271659695,
+          0.004473926018409543
+        ]
+      ],
+      "initial_error": [
+        0.44677456285196826,
+        -0.2613345090584793
+      ],
+      "initial_loss": 0.2679032356364038,
+      "eigenvalues_ascending": [
+        1.770712091710147e-09,
+        0.009038802435898833
+      ],
+      "lambda_min": 1.770712091710147e-09,
+      "lambda_max": 0.009038802435898833,
+      "relative_gap": 1.9590118317859492e-07,
+      "condition_number": 5104614.396781575,
+      "shares_ascending": [
+        0.9333319929987144,
+        0.06666800700128554
+      ],
+      "weak_share": 0.9333319929987144,
+      "direction_factors": [
+        0.9995299476514877,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995299476514877,
+      "weak_direction_decrease": 0.0004700523485122732,
+      "predicted_final_to_initial_loss_ratio": 0.9328932781034637
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "epsilon": 0.01,
+      "seed": 4,
+      "problem_name": "nonlocal_diffusion__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.004517070375855447,
+          0.004471804729241917
+        ],
+        [
+          0.004471804729241917,
+          0.0044269962233688545
+        ]
+      ],
+      "initial_error": [
+        0.49096240588768253,
+        -0.2175807320709934
+      ],
+      "initial_loss": 0.28838545896357093,
+      "eigenvalues_ascending": [
+        1.7842148231951571e-09,
+        0.008944064815009478
+      ],
+      "lambda_min": 1.7842148231951571e-09,
+      "lambda_max": 0.008944064815009478,
+      "relative_gap": 1.994859004376822e-07,
+      "condition_number": 5012885.611494092,
+      "shares_ascending": [
+        0.8670197836051374,
+        0.13298021639486277
+      ],
+      "weak_share": 0.8670197836051374,
+      "direction_factors": [
+        0.9995213484097558,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995213484097558,
+      "weak_direction_decrease": 0.00047865159024418347,
+      "predicted_final_to_initial_loss_ratio": 0.8666047832069417
+    },
+    {
+      "family": "weak_boundary",
+      "epsilon": 0.01,
+      "seed": 0,
+      "problem_name": "weak_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.34432200770618093,
+          0.3436073062758835
+        ],
+        [
+          0.3436073062758835,
+          0.3429380571944708
+        ]
+      ],
+      "initial_error": [
+        0.6948959522972845,
+        -0.005962134392280827
+      ],
+      "initial_loss": 0.48291593156566154,
+      "eigenvalues_ascending": [
+        2.2029406270579477e-05,
+        0.6872380354943812
+      ],
+      "lambda_min": 2.2029406270579477e-05,
+      "lambda_max": 0.6872380354943812,
+      "relative_gap": 3.205498696638944e-05,
+      "condition_number": 31196.39390427855,
+      "shares_ascending": [
+        0.5075724689991968,
+        0.4924275310008031
+      ],
+      "weak_share": 0.5075724689991968,
+      "direction_factors": [
+        0.9259523885279212,
+        0.0
+      ],
+      "weak_direction_factor": 0.9259523885279212,
+      "weak_direction_decrease": 0.07404761147207883,
+      "predicted_final_to_initial_loss_ratio": 0.4699879400208205
+    },
+    {
+      "family": "weak_boundary",
+      "epsilon": 0.01,
+      "seed": 1,
+      "problem_name": "weak_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.34100219612257654,
+          0.3402683190012854
+        ],
+        [
+          0.3402683190012854,
+          0.3395797024949656
+        ]
+      ],
+      "initial_error": [
+        0.8064300056029721,
+        0.10913747739142331
+      ],
+      "initial_loss": 0.662240342908173,
+      "eigenvalues_ascending": [
+        2.1886965468009834e-05,
+        0.6805600116520742
+      ],
+      "lambda_min": 2.1886965468009834e-05,
+      "lambda_max": 0.6805600116520742,
+      "relative_gap": 3.2160228478424335e-05,
+      "condition_number": 31094.30645590346,
+      "shares_ascending": [
+        0.3660927688524698,
+        0.6339072311475301
+      ],
+      "weak_share": 0.3660927688524698,
+      "direction_factors": [
+        0.9257185383483668,
+        0.0
+      ],
+      "weak_direction_factor": 0.9257185383483668,
+      "weak_direction_decrease": 0.07428146165163318,
+      "predicted_final_to_initial_loss_ratio": 0.3388988628820148
+    },
+    {
+      "family": "weak_boundary",
+      "epsilon": 0.01,
+      "seed": 2,
+      "problem_name": "weak_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.3404395431923972,
+          0.339711281170962
+        ],
+        [
+          0.339711281170962,
+          0.3390274540757568
+        ]
+      ],
+      "initial_error": [
+        0.7540648336245157,
+        0.05173165719881413
+      ],
+      "initial_loss": 0.5712899376657041,
+      "eigenvalues_ascending": [
+        2.1483754216261586e-05,
+        0.6794455135139377
+      ],
+      "lambda_min": 2.1483754216261586e-05,
+      "lambda_max": 0.6794455135139377,
+      "relative_gap": 3.16195394464414e-05,
+      "condition_number": 31626.014088340693,
+      "shares_ascending": [
+        0.4306883453742907,
+        0.5693116546257092
+      ],
+      "weak_share": 0.4306883453742907,
+      "direction_factors": [
+        0.926920595504719,
+        0.0
+      ],
+      "weak_direction_factor": 0.926920595504719,
+      "weak_direction_decrease": 0.07307940449528105,
+      "predicted_final_to_initial_loss_ratio": 0.39921389757127956
+    },
+    {
+      "family": "weak_boundary",
+      "epsilon": 0.01,
+      "seed": 3,
+      "problem_name": "weak_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.34231959245283516,
+          0.3415584515172742
+        ],
+        [
+          0.3415584515172742,
+          0.3408425633916629
+        ]
+      ],
+      "initial_error": [
+        0.7820631936650856,
+        0.078841069695751
+      ],
+      "initial_loss": 0.6178387531564035,
+      "eigenvalues_ascending": [
+        2.182800125793971e-05,
+        0.6831403278432402
+      ],
+      "lambda_min": 2.182800125793971e-05,
+      "lambda_max": 0.6831403278432402,
+      "relative_gap": 3.1952441348109916e-05,
+      "condition_number": 31296.513124157664,
+      "shares_ascending": [
+        0.39914349753431627,
+        0.6008565024656835
+      ],
+      "weak_share": 0.39914349753431627,
+      "direction_factors": [
+        0.9261803051553293,
+        0.0
+      ],
+      "weak_direction_factor": 0.9261803051553293,
+      "weak_direction_decrease": 0.07381969484467066,
+      "predicted_final_to_initial_loss_ratio": 0.36967884634709847
+    },
+    {
+      "family": "weak_boundary",
+      "epsilon": 0.01,
+      "seed": 4,
+      "problem_name": "weak_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.3409016426729896,
+          0.3401709126647131
+        ],
+        [
+          0.3401709126647131,
+          0.3394851190908904
+        ]
+      ],
+      "initial_error": [
+        1.3178031167472555,
+        0.6145912315232163
+      ],
+      "initial_loss": 2.1143274363740043,
+      "eigenvalues_ascending": [
+        2.173089048565502e-05,
+        0.6803650308733944
+      ],
+      "lambda_min": 2.173089048565502e-05,
+      "lambda_max": 0.6803650308733944,
+      "relative_gap": 3.1940046151047416e-05,
+      "condition_number": 31308.65858085827,
+      "shares_ascending": [
+        0.11627365912839661,
+        0.8837263408716033
+      ],
+      "weak_share": 0.11627365912839661,
+      "direction_factors": [
+        0.926207858367067,
+        0.0
+      ],
+      "weak_direction_factor": 0.926207858367067,
+      "weak_direction_decrease": 0.07379214163293302,
+      "predicted_final_to_initial_loss_ratio": 0.1076935768058146
+    },
+    {
+      "family": "nonlocal_boundary",
+      "epsilon": 0.01,
+      "seed": 0,
+      "problem_name": "nonlocal_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.34432200770618093,
+          0.34458412934027843
+        ],
+        [
+          0.34458412934027843,
+          0.3448466814659231
+        ]
+      ],
+      "initial_error": [
+        0.7258882071571201,
+        0.01954663562710912
+      ],
+      "initial_loss": 0.5272957602541171,
+      "eigenvalues_ascending": [
+        1.1538535821253859e-07,
+        0.6891685737867458
+      ],
+      "lambda_min": 1.1538535821253859e-07,
+      "lambda_max": 0.6891685737867458,
+      "relative_gap": 1.6742690047303737e-07,
+      "condition_number": 5972755.854493294,
+      "shares_ascending": [
+        0.47347173782733554,
+        0.5265282621726645
+      ],
+      "weak_share": 0.47347173782733554,
+      "direction_factors": [
+        0.9995982561462685,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995982561462685,
+      "weak_direction_decrease": 0.00040174385373148436,
+      "predicted_final_to_initial_loss_ratio": 0.47328152346674784
+    },
+    {
+      "family": "nonlocal_boundary",
+      "epsilon": 0.01,
+      "seed": 1,
+      "problem_name": "nonlocal_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.34100219612257654,
+          0.34126304438575494
+        ],
+        [
+          0.34126304438575494,
+          0.34152432268442584
+        ]
+      ],
+      "initial_error": [
+        0.8374222604628077,
+        0.13139311859126596
+      ],
+      "initial_loss": 0.7185401939317769,
+      "eigenvalues_ascending": [
+        1.151621835115968e-07,
+        0.6825264036448189
+      ],
+      "lambda_min": 1.151621835115968e-07,
+      "lambda_max": 0.6825264036448189,
+      "relative_gap": 1.6872927244515254e-07,
+      "condition_number": 5926653.896555276,
+      "shares_ascending": [
+        0.3472321248081377,
+        0.6527678751918624
+      ],
+      "weak_share": 0.3472321248081377,
+      "direction_factors": [
+        0.9995951317136318,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995951317136318,
+      "weak_direction_decrease": 0.0004048682863682096,
+      "predicted_final_to_initial_loss_ratio": 0.34709154153279465
+    },
+    {
+      "family": "nonlocal_boundary",
+      "epsilon": 0.01,
+      "seed": 2,
+      "problem_name": "nonlocal_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.3404395431923972,
+          0.340697391638796
+        ],
+        [
+          0.340697391638796,
+          0.34095566573164293
+        ]
+      ],
+      "initial_error": [
+        0.7850570884843513,
+        0.0787626525465926
+      ],
+      "initial_loss": 0.6225181876157018,
+      "eigenvalues_ascending": [
+        1.1508897229672854e-07,
+        0.6813950938350679
+      ],
+      "lambda_min": 1.1508897229672854e-07,
+      "lambda_max": 0.6813950938350679,
+      "relative_gap": 1.6890196794487912e-07,
+      "condition_number": 5920594.130237419,
+      "shares_ascending": [
+        0.40104369976839044,
+        0.5989563002316096
+      ],
+      "weak_share": 0.40104369976839044,
+      "direction_factors": [
+        0.9995947174123694,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995947174123694,
+      "weak_direction_decrease": 0.00040528258763061764,
+      "predicted_final_to_initial_loss_ratio": 0.4008811637399953
+    },
+    {
+      "family": "nonlocal_boundary",
+      "epsilon": 0.01,
+      "seed": 3,
+      "problem_name": "nonlocal_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.34231959245283516,
+          0.3425799793256383
+        ],
+        [
+          0.3425799793256383,
+          0.3428407957482065
+        ]
+      ],
+      "initial_error": [
+        0.8130554485249212,
+        0.10685785907396246
+      ],
+      "initial_loss": 0.6724777644219316,
+      "eigenvalues_ascending": [
+        1.1565465801721686e-07,
+        0.6851602725463836
+      ],
+      "lambda_min": 1.1565465801721686e-07,
+      "lambda_max": 0.6851602725463836,
+      "relative_gap": 1.6879942204965969e-07,
+      "condition_number": 5924190.899811295,
+      "shares_ascending": [
+        0.37117158028820907,
+        0.6288284197117906
+      ],
+      "weak_share": 0.37117158028820907,
+      "direction_factors": [
+        0.9995949634231373,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995949634231373,
+      "weak_direction_decrease": 0.0004050365768627495,
+      "predicted_final_to_initial_loss_ratio": 0.3710212422219004
+    },
+    {
+      "family": "nonlocal_boundary",
+      "epsilon": 0.01,
+      "seed": 4,
+      "problem_name": "nonlocal_boundary__epsilon_0.01__contrast",
+      "exact_structural_rank": 2,
+      "width": 16384,
+      "kernel_initial": [
+        [
+          0.3409016426729896,
+          0.3411607664558116
+        ],
+        [
+          0.3411607664558116,
+          0.3414203151379461
+        ]
+      ],
+      "initial_error": [
+        1.348795371607091,
+        0.6430128535069284
+      ],
+      "initial_loss": 2.2327144842438336,
+      "eigenvalues_ascending": [
+        1.138813588708043e-07,
+        0.6823218439295768
+      ],
+      "lambda_min": 1.138813588708043e-07,
+      "lambda_max": 0.6823218439295768,
+      "relative_gap": 1.6690270124571613e-07,
+      "condition_number": 5991514.771997537,
+      "shares_ascending": [
+        0.11179174169992274,
+        0.8882082583000773
+      ],
+      "weak_share": 0.11179174169992274,
+      "direction_factors": [
+        0.9995995137193608,
+        0.0
+      ],
+      "weak_direction_factor": 0.9995995137193608,
+      "weak_direction_decrease": 0.00040048628063915626,
+      "predicted_final_to_initial_loss_ratio": 0.11174697064108317
+    }
+  ],
+  "summary": [
+    {
+      "family": "pointwise_poisson",
+      "epsilon": 0.01,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "runs": 5,
+      "median_relative_gap": 2.667070452057443e-05,
+      "median_condition_number": 37494.32262760722,
+      "median_weak_share": 0.1848648580297447,
+      "median_weak_direction_decrease": 0.06200441075856922,
+      "median_predicted_final_to_initial_loss_ratio": 0.17315293625566688
+    },
+    {
+      "family": "vector_stokes",
+      "epsilon": 0.01,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "runs": 5,
+      "median_relative_gap": 2.6368198519609818e-05,
+      "median_condition_number": 37924.47175548637,
+      "median_weak_share": 0.8519776363294452,
+      "median_weak_direction_decrease": 0.06132315795550336,
+      "median_predicted_final_to_initial_loss_ratio": 0.7998031943310963
+    },
+    {
+      "family": "weak_poisson",
+      "epsilon": 0.01,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "runs": 5,
+      "median_relative_gap": 5.956437792413606e-06,
+      "median_condition_number": 167885.5777313155,
+      "median_weak_share": 0.3462645210111336,
+      "median_weak_direction_decrease": 0.01419377270245481,
+      "median_predicted_final_to_initial_loss_ratio": 0.34132232889903424
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "epsilon": 0.01,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "runs": 5,
+      "median_relative_gap": 1.9742538335022798e-07,
+      "median_condition_number": 5065204.80310287,
+      "median_weak_share": 0.9333319929987144,
+      "median_weak_direction_decrease": 0.0004737087031281284,
+      "median_predicted_final_to_initial_loss_ratio": 0.9328932781034637
+    },
+    {
+      "family": "weak_boundary",
+      "epsilon": 0.01,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "runs": 5,
+      "median_relative_gap": 3.1952441348109916e-05,
+      "median_condition_number": 31296.513124157664,
+      "median_weak_share": 0.39914349753431627,
+      "median_weak_direction_decrease": 0.07381969484467066,
+      "median_predicted_final_to_initial_loss_ratio": 0.36967884634709847
+    },
+    {
+      "family": "nonlocal_boundary",
+      "epsilon": 0.01,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "runs": 5,
+      "median_relative_gap": 1.6872927244515254e-07,
+      "median_condition_number": 5926653.896555276,
+      "median_weak_share": 0.37117158028820907,
+      "median_weak_direction_decrease": 0.0004048682863682096,
+      "median_predicted_final_to_initial_loss_ratio": 0.3710212422219004
+    }
+  ],
+  "observed": {
+    "available": true,
+    "path": "experiments/theorem_audit/data/compatible_rank_convergence_conditioning.json",
+    "panel": "conditioning_width_16384",
+    "aggregate_description": "Frozen aggregate values used by the manuscript's finite-width GD evidence figure.",
+    "raw_source_sha256": "4fdb41f09e137ea6c0576586f3dacfabb01cb5b5f2a5e87bc23717b87681eabe",
+    "median_final_to_initial_loss_ratio": {
+      "nonlocal_boundary": {
+        "0.01": 0.37102124550661053,
+        "0.1": 0.3509206260133975,
+        "1": 0.012100428761998839
+      },
+      "nonlocal_diffusion": {
+        "0.01": 0.932889404851244,
+        "0.1": 0.5925499438663997,
+        "1": 6.362160325588183e-30
+      },
+      "pointwise_poisson": {
+        "0.01": 0.17312564280154474,
+        "0.1": 0.00041745274067011147,
+        "1": 8.027322381648843e-31
+      },
+      "vector_stokes": {
+        "0.01": 0.7996642258651916,
+        "0.1": 0.0010980139519970041,
+        "1": 5.224615150427785e-32
+      },
+      "weak_boundary": {
+        "0.01": 0.3696302249043255,
+        "0.1": 0.0001041489686440025,
+        "1": 0.0
+      },
+      "weak_poisson": {
+        "0.01": 0.3413086258869246,
+        "0.1": 0.059339217906481806,
+        "1": 6.554353389330828e-29
+      }
+    }
+  },
+  "comparison": [
+    {
+      "family": "pointwise_poisson",
+      "epsilon": 0.01,
+      "predicted": 0.17315293625566688,
+      "observed": 0.17312564280154474,
+      "difference": 2.7293454122140348e-05
+    },
+    {
+      "family": "vector_stokes",
+      "epsilon": 0.01,
+      "predicted": 0.7998031943310963,
+      "observed": 0.7996642258651916,
+      "difference": 0.00013896846590466527
+    },
+    {
+      "family": "weak_poisson",
+      "epsilon": 0.01,
+      "predicted": 0.34132232889903424,
+      "observed": 0.3413086258869246,
+      "difference": 1.3703012109622659e-05
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "epsilon": 0.01,
+      "predicted": 0.9328932781034637,
+      "observed": 0.932889404851244,
+      "difference": 3.873252219621648e-06
+    },
+    {
+      "family": "weak_boundary",
+      "epsilon": 0.01,
+      "predicted": 0.36967884634709847,
+      "observed": 0.3696302249043255,
+      "difference": 4.862144277295588e-05
+    },
+    {
+      "family": "nonlocal_boundary",
+      "epsilon": 0.01,
+      "predicted": 0.3710212422219004,
+      "observed": 0.37102124550661053,
+      "difference": -3.284710115014633e-09
+    }
+  ],
+  "elapsed_seconds": 15.87819989999116,
+  "environment": {
+    "python": "3.14.6",
+    "torch": "2.13.0+cpu",
+    "numpy": "2.5.2",
+    "threads": 1,
+    "git": {
+      "commit": "cc7834117c67d14ab455314dde5fa40e1a165783",
+      "dirty": true,
+      "status_entry_count": 41
+    }
+  }
+}

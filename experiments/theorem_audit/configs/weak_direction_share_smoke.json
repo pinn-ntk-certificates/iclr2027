@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "output_dir": "experiments/theorem_audit/results/weak_direction_share_smoke",
+  "families": ["pointwise_poisson", "weak_boundary"],
+  "epsilons": [0.01, 0.1],
+  "target_mode": "contrast",
+  "contrast_amplitude": 0.5,
+  "width": 256,
+  "maximum_width_initialization_bank": 16384,
+  "seeds": [0, 1],
+  "steps": 3000,
+  "learning_rate_factor": 0.2,
+  "threads": 1,
+  "observed_aggregate": "experiments/theorem_audit/data/compatible_rank_convergence_conditioning.json",
+  "observed_panel": "conditioning_width_16384"
+}

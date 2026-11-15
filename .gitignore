@@ -12,6 +12,10 @@ experiments/theorem_audit/results/**/figures/
 !experiments/theorem_audit/results/local/references/*.npz
 !experiments/theorem_audit/results/per_iterate_monotonicity/per_iterate_monotonicity_summary.json
 !experiments/theorem_audit/results/nonlinear_kernel_variance/nonlinear_kernel_variance_summary.json
+!experiments/theorem_audit/results/example_gd_certificate/example_gd_certificate_summary.json
+!experiments/theorem_audit/results/width_requirement/width_requirement_summary.json
+!experiments/theorem_audit/results/weak_direction_share/weak_direction_share_summary.json
+!experiments/theorem_audit/results/depth_variation/depth_variation_summary.json
 
 # Editors and operating systems
 .vscode/

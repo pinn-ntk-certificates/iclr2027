@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "output_dir": "experiments/theorem_audit/results/width_requirement",
+  "problems": [
+    "poisson_1d",
+    "variable_elliptic_2d",
+    "heat_1d",
+    "transport_1d",
+    "wave_1d",
+    "biharmonic_2d",
+    "stokes_2d",
+    "weak_poisson_1d",
+    "nonlocal_diffusion_1d",
+    "integro_diff_1d",
+    "caputo_diffusion_1d"
+  ],
+  "delta": 0.05,
+  "tube_radii": [0.1, 0.5, 1.0],
+  "quadrature_orders": {"2": [160, 240], "3": [56, 80]},
+  "quadrature_relative_tolerance": 1e-8,
+  "quadrature_chunk": 16384,
+  "support_samples": 300000,
+  "tube_samples": 200000,
+  "sample_chunk": 20000,
+  "seed": 20261115,
+  "finite_difference_step": 1e-4,
+  "tested_widths": [4, 16, 64, 256, 1024, 4096, 16384],
+  "threads": 8
+}
