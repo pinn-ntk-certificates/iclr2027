@@ -182,10 +182,20 @@ initialization sweep were run as Slurm job arrays with
 `experiments/theorem_audit/slurm/`. See
 `experiments/theorem_audit/EXTENSIVE_EXPERIMENTS.md` for the submission and
 aggregation commands and `experiments/theorem_audit/CAMPAIGN_STATUS.md` for
-coverage. The per-run histories of that campaign are not included; the
-tracked aggregate `experiments/theorem_audit/data/compatible_rank_convergence_conditioning.json`
-holds every count and median shown in the main-text figure together with the
-SHA256 of the 1,080-row source table, and the three-row audit is fully
+coverage. The campaign reported in the paper is the one of 15 November 2026
+in `experiments/theorem_audit/results/campaign_cluster_20261115/`: its
+configuration, snapshot, aggregates, compatible-control report and evidence
+assessment are tracked there. The per-run JSON records and NPZ histories
+(620 MB) are the release assets `campaign_cluster_20261115_training_records.tar.gz`
+and `campaign_cluster_20261115_control_records.tar.gz` of this repository;
+`RECORDS.sha256` in that directory lists their hashes and the hash of every
+file inside them, and `CAMPAIGN_STATUS.md` says how to restore and verify
+them. The tracked aggregate
+`experiments/theorem_audit/data/compatible_rank_convergence_conditioning.json`
+is built from that campaign by
+`experiments/theorem_audit/build_figure_aggregate.py` (`--check` verifies it)
+and holds every count and median shown in the main-text figure together with
+the SHA256 of the 1,080-row source table. The three-row audit is fully
 regenerable with the commands above.
 
 ## Layout
@@ -195,7 +205,7 @@ regenerable with the commands above.
 | `experiments/theorem_audit/*.py` | runner, engine, features, constraints, problems, aggregation, plotting, tests |
 | `experiments/theorem_audit/configs/` | every configuration used in the paper (single source of numerical settings) |
 | `experiments/theorem_audit/data/` | tracked aggregates behind the figures |
-| `experiments/theorem_audit/results/` | tracked certificate manifests and experiment summaries |
+| `experiments/theorem_audit/results/` | tracked certificate manifests, experiment summaries, and the frozen campaign `campaign_cluster_20261115/` |
 | `experiments/theorem_audit/slurm/` | job-array scripts for the broad campaign |
 | `figures/` | figures in the paper with their `_summary.json` provenance |
 

@@ -1,0 +1,1126 @@
+{
+  "scope": "Completed runs only; all control targets functionally compatible; descriptive post-hoc analysis.",
+  "input_sha256": {
+    "results/broad/findings.json": "929708a7a3ccd863200dd0d594fc3b7768882ba6f098b6230fbda0c96c21478d",
+    "results/broad/initialization_aggregate.json": "c4e3861d27cada98b18b7400b24c98b8825605b45d0b727912bbfda792fbb2dd",
+    "results/controls_compatible/aggregate.json": "c4eca8d433c7baae5e6252d793155294d54f2bcea026682fdc53fc5954c79713",
+    "results/controls_compatible/runs.csv": "136d636a62f2931a46eb3e211127c8f725a34ec40d264729cbc7f45f3ff7a19b"
+  },
+  "analysis_source_sha256": "fb6e0bb6edd34164bffe0a54b7e5a1e4a86a0a46f6f4529656fdbaabc8610a05",
+  "coverage": {
+    "pde_runs": 770,
+    "compatible_controls": 1080,
+    "initializations": 7700
+  },
+  "rank": {
+    "distinct_kernel_instances": 600,
+    "independent_kernel_instances": 480,
+    "independent_rank2": 480,
+    "independent_Kout_positive": 480,
+    "singular_kernel_instances": 120,
+    "singular_rank1": 120
+  },
+  "gd": {
+    "pde_loss_reduced": 770,
+    "pde_loss_reduced_10x": 767,
+    "positive_initial_ntk_runs": 960,
+    "positive_initial_ntk_loss_reduced": 959,
+    "manufactured_positive_initial_ntk_runs": 480,
+    "manufactured_positive_initial_ntk_loss_reduced_10x": 480,
+    "width_ge256_positive_initial_ntk_runs": 720,
+    "width_ge256_positive_initial_ntk_loss_reduced": 720,
+    "width16384_positive_initial_ntk_runs": 240,
+    "width16384_positive_initial_ntk_loss_reduced": 240,
+    "width16384_positive_initial_ntk_median_loss_ratio": 6.894414428640614e-07,
+    "compatible_singular_runs": 120,
+    "compatible_singular_loss_reduced_100x": 120,
+    "compatible_singular_loss_below_1e_minus12": 118,
+    "width_ge256_compatible_singular_runs": 90,
+    "width_ge256_compatible_singular_loss_below_1e_minus12": 90
+  },
+  "width_summary": [
+    {
+      "width": 4,
+      "runs": 110,
+      "initial_reference_error_operator": 0.445721308733966,
+      "max_kernel_drift_operator": 1.8041206396927685,
+      "final_relative_error_to_frozen_dynamics": 0.963009670364126,
+      "final_over_initial_loss": 0.0007231873771749207,
+      "max_sqrt_width_per_neuron_drift": 3.33962040645259,
+      "max_jacobian_drift_over_initial_sqrt_gap": 1467.6498806331258,
+      "gap_preserved": 0,
+      "informative_jacobian_bound": 0
+    },
+    {
+      "width": 16,
+      "runs": 110,
+      "initial_reference_error_operator": 0.2225773715821683,
+      "max_kernel_drift_operator": 0.6110740189021455,
+      "final_relative_error_to_frozen_dynamics": 0.9075705845720827,
+      "final_over_initial_loss": 9.437912765230771e-05,
+      "max_sqrt_width_per_neuron_drift": 5.033022416772237,
+      "max_jacobian_drift_over_initial_sqrt_gap": 329.0973682385925,
+      "gap_preserved": 17,
+      "informative_jacobian_bound": 0
+    },
+    {
+      "width": 64,
+      "runs": 110,
+      "initial_reference_error_operator": 0.12898459701085607,
+      "max_kernel_drift_operator": 0.1723037819044053,
+      "final_relative_error_to_frozen_dynamics": 0.5946058457037924,
+      "final_over_initial_loss": 9.941621958834706e-05,
+      "max_sqrt_width_per_neuron_drift": 6.542885201537562,
+      "max_jacobian_drift_over_initial_sqrt_gap": 68.87341325189425,
+      "gap_preserved": 93,
+      "informative_jacobian_bound": 0
+    },
+    {
+      "width": 256,
+      "runs": 110,
+      "initial_reference_error_operator": 0.05459300958815928,
+      "max_kernel_drift_operator": 0.04837930576510355,
+      "final_relative_error_to_frozen_dynamics": 0.27416507161094983,
+      "final_over_initial_loss": 0.00010007452557424105,
+      "max_sqrt_width_per_neuron_drift": 7.6690277014043655,
+      "max_jacobian_drift_over_initial_sqrt_gap": 30.991326792765648,
+      "gap_preserved": 110,
+      "informative_jacobian_bound": 0
+    },
+    {
+      "width": 1024,
+      "runs": 110,
+      "initial_reference_error_operator": 0.02595341230713779,
+      "max_kernel_drift_operator": 0.013036541072523862,
+      "final_relative_error_to_frozen_dynamics": 0.08824476013165847,
+      "final_over_initial_loss": 0.00012543157162265694,
+      "max_sqrt_width_per_neuron_drift": 8.674700102645073,
+      "max_jacobian_drift_over_initial_sqrt_gap": 15.351141115917654,
+      "gap_preserved": 110,
+      "informative_jacobian_bound": 0
+    },
+    {
+      "width": 4096,
+      "runs": 110,
+      "initial_reference_error_operator": 0.015617294461268843,
+      "max_kernel_drift_operator": 0.0033348858920251843,
+      "final_relative_error_to_frozen_dynamics": 0.0225013847327422,
+      "final_over_initial_loss": 0.00014449590552138391,
+      "max_sqrt_width_per_neuron_drift": 9.168501947824122,
+      "max_jacobian_drift_over_initial_sqrt_gap": 8.106449362484303,
+      "gap_preserved": 110,
+      "informative_jacobian_bound": 0
+    },
+    {
+      "width": 16384,
+      "runs": 110,
+      "initial_reference_error_operator": 0.008088298453624566,
+      "max_kernel_drift_operator": 0.0008624446027554523,
+      "final_relative_error_to_frozen_dynamics": 0.0069107960995547805,
+      "final_over_initial_loss": 0.00012368956494431015,
+      "max_sqrt_width_per_neuron_drift": 9.42318299505667,
+      "max_jacobian_drift_over_initial_sqrt_gap": 4.201466412238351,
+      "gap_preserved": 110,
+      "informative_jacobian_bound": 2
+    }
+  ],
+  "operator_class": [
+    {
+      "operator_class": "classical_local",
+      "problems": "poisson_1d;variable_elliptic_2d;heat_1d;transport_1d;wave_1d;biharmonic_2d;stokes_2d",
+      "runs": 490,
+      "endpoint_loss_reduced": 490,
+      "endpoint_loss_reduced_10x": 487
+    },
+    {
+      "operator_class": "weak_variational",
+      "problems": "weak_poisson_1d",
+      "runs": 70,
+      "endpoint_loss_reduced": 70,
+      "endpoint_loss_reduced_10x": 70
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "problems": "nonlocal_diffusion_1d;integro_diff_1d;caputo_diffusion_1d",
+      "runs": 210,
+      "endpoint_loss_reduced": 210,
+      "endpoint_loss_reduced_10x": 210
+    }
+  ],
+  "operator_class_width_summary": [
+    {
+      "operator_class": "classical_local",
+      "width": 4,
+      "runs": 70,
+      "initial_reference_error_operator": 0.5069603461879395,
+      "max_kernel_drift_operator": 2.593979723648573,
+      "final_relative_error_to_frozen_dynamics": 0.9701361133164221,
+      "final_over_initial_loss": 0.0037393379241967514,
+      "max_sqrt_width_per_neuron_drift": 3.404020575447622,
+      "max_jacobian_drift_over_initial_sqrt_gap": 9077.309079406803,
+      "gap_preserved_at_saved_checkpoints": 0,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "classical_local",
+      "width": 16,
+      "runs": 70,
+      "initial_reference_error_operator": 0.2400605685335683,
+      "max_kernel_drift_operator": 0.9039927643544492,
+      "final_relative_error_to_frozen_dynamics": 0.9349658303515918,
+      "final_over_initial_loss": 0.000120441758889946,
+      "max_sqrt_width_per_neuron_drift": 5.196298758025112,
+      "max_jacobian_drift_over_initial_sqrt_gap": 801.1807278662686,
+      "gap_preserved_at_saved_checkpoints": 5,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "classical_local",
+      "width": 64,
+      "runs": 70,
+      "initial_reference_error_operator": 0.14099896702353398,
+      "max_kernel_drift_operator": 0.36870157078454846,
+      "final_relative_error_to_frozen_dynamics": 0.6822997462678497,
+      "final_over_initial_loss": 9.941621958834706e-05,
+      "max_sqrt_width_per_neuron_drift": 7.029959355986758,
+      "max_jacobian_drift_over_initial_sqrt_gap": 283.61815233285955,
+      "gap_preserved_at_saved_checkpoints": 56,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "classical_local",
+      "width": 256,
+      "runs": 70,
+      "initial_reference_error_operator": 0.06696323517337635,
+      "max_kernel_drift_operator": 0.10482991873189237,
+      "final_relative_error_to_frozen_dynamics": 0.38337599234407965,
+      "final_over_initial_loss": 9.548585656838859e-05,
+      "max_sqrt_width_per_neuron_drift": 8.304049233073764,
+      "max_jacobian_drift_over_initial_sqrt_gap": 132.8855033483659,
+      "gap_preserved_at_saved_checkpoints": 70,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "classical_local",
+      "width": 1024,
+      "runs": 70,
+      "initial_reference_error_operator": 0.033968049442538714,
+      "max_kernel_drift_operator": 0.024393020914473127,
+      "final_relative_error_to_frozen_dynamics": 0.13370161699848016,
+      "final_over_initial_loss": 0.00016433173036175535,
+      "max_sqrt_width_per_neuron_drift": 9.48848464797885,
+      "max_jacobian_drift_over_initial_sqrt_gap": 63.082533359097425,
+      "gap_preserved_at_saved_checkpoints": 70,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "classical_local",
+      "width": 4096,
+      "runs": 70,
+      "initial_reference_error_operator": 0.01904380193426905,
+      "max_kernel_drift_operator": 0.006720396877891853,
+      "final_relative_error_to_frozen_dynamics": 0.031537619720364805,
+      "final_over_initial_loss": 0.00016777759177516262,
+      "max_sqrt_width_per_neuron_drift": 10.530819597850765,
+      "max_jacobian_drift_over_initial_sqrt_gap": 31.82511612877341,
+      "gap_preserved_at_saved_checkpoints": 70,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "classical_local",
+      "width": 16384,
+      "runs": 70,
+      "initial_reference_error_operator": 0.009632121945294026,
+      "max_kernel_drift_operator": 0.0017474277758404585,
+      "final_relative_error_to_frozen_dynamics": 0.009875697796939142,
+      "final_over_initial_loss": 0.0001677975250067619,
+      "max_sqrt_width_per_neuron_drift": 10.896251537357582,
+      "max_jacobian_drift_over_initial_sqrt_gap": 15.302172289151809,
+      "gap_preserved_at_saved_checkpoints": 70,
+      "informative_jacobian_bound_at_saved_checkpoints": 2
+    },
+    {
+      "operator_class": "weak_variational",
+      "width": 4,
+      "runs": 10,
+      "initial_reference_error_operator": 0.43733846668513027,
+      "max_kernel_drift_operator": 1.371237569685111,
+      "final_relative_error_to_frozen_dynamics": 0.994164287638134,
+      "final_over_initial_loss": 1.675517115984074e-05,
+      "max_sqrt_width_per_neuron_drift": 3.365194735542756,
+      "max_jacobian_drift_over_initial_sqrt_gap": 690.0122983000679,
+      "gap_preserved_at_saved_checkpoints": 0,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "weak_variational",
+      "width": 16,
+      "runs": 10,
+      "initial_reference_error_operator": 0.21292855700140484,
+      "max_kernel_drift_operator": 0.49005156804135525,
+      "final_relative_error_to_frozen_dynamics": 0.908768133754161,
+      "final_over_initial_loss": 1.018667488876414e-05,
+      "max_sqrt_width_per_neuron_drift": 4.9214293000059515,
+      "max_jacobian_drift_over_initial_sqrt_gap": 101.96317240417162,
+      "gap_preserved_at_saved_checkpoints": 3,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "weak_variational",
+      "width": 64,
+      "runs": 10,
+      "initial_reference_error_operator": 0.12394960482154166,
+      "max_kernel_drift_operator": 0.1439416588402099,
+      "final_relative_error_to_frozen_dynamics": 0.37855112120303147,
+      "final_over_initial_loss": 8.633009539862293e-05,
+      "max_sqrt_width_per_neuron_drift": 5.351910162561417,
+      "max_jacobian_drift_over_initial_sqrt_gap": 33.01570797410968,
+      "gap_preserved_at_saved_checkpoints": 10,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "weak_variational",
+      "width": 256,
+      "runs": 10,
+      "initial_reference_error_operator": 0.04799956643858205,
+      "max_kernel_drift_operator": 0.03556338117957225,
+      "final_relative_error_to_frozen_dynamics": 0.21919788237044607,
+      "final_over_initial_loss": 0.0001054031375805105,
+      "max_sqrt_width_per_neuron_drift": 6.292004150391345,
+      "max_jacobian_drift_over_initial_sqrt_gap": 14.857471383955819,
+      "gap_preserved_at_saved_checkpoints": 10,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "weak_variational",
+      "width": 1024,
+      "runs": 10,
+      "initial_reference_error_operator": 0.018792805362629478,
+      "max_kernel_drift_operator": 0.010389814758414585,
+      "final_relative_error_to_frozen_dynamics": 0.07891049938471698,
+      "final_over_initial_loss": 0.00010253899214094207,
+      "max_sqrt_width_per_neuron_drift": 7.100278053271213,
+      "max_jacobian_drift_over_initial_sqrt_gap": 7.588105746349663,
+      "gap_preserved_at_saved_checkpoints": 10,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "weak_variational",
+      "width": 4096,
+      "runs": 10,
+      "initial_reference_error_operator": 0.011973071886349145,
+      "max_kernel_drift_operator": 0.002598476771867128,
+      "final_relative_error_to_frozen_dynamics": 0.01901117353033526,
+      "final_over_initial_loss": 9.957427586371554e-05,
+      "max_sqrt_width_per_neuron_drift": 7.574993029678189,
+      "max_jacobian_drift_over_initial_sqrt_gap": 3.9653915394493264,
+      "gap_preserved_at_saved_checkpoints": 10,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "weak_variational",
+      "width": 16384,
+      "runs": 10,
+      "initial_reference_error_operator": 0.006394327874992535,
+      "max_kernel_drift_operator": 0.0007219668303082832,
+      "final_relative_error_to_frozen_dynamics": 0.005708467019227996,
+      "final_over_initial_loss": 9.767610453768265e-05,
+      "max_sqrt_width_per_neuron_drift": 8.291864810900588,
+      "max_jacobian_drift_over_initial_sqrt_gap": 1.9447411799492453,
+      "gap_preserved_at_saved_checkpoints": 10,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "width": 4,
+      "runs": 30,
+      "initial_reference_error_operator": 0.32485475967212973,
+      "max_kernel_drift_operator": 1.4596849118754833,
+      "final_relative_error_to_frozen_dynamics": 0.9258992894796447,
+      "final_over_initial_loss": 0.00029845875213558,
+      "max_sqrt_width_per_neuron_drift": 2.9183584651218792,
+      "max_jacobian_drift_over_initial_sqrt_gap": 1074.3197279765882,
+      "gap_preserved_at_saved_checkpoints": 0,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "width": 16,
+      "runs": 30,
+      "initial_reference_error_operator": 0.18335432979353045,
+      "max_kernel_drift_operator": 0.3726614825082405,
+      "final_relative_error_to_frozen_dynamics": 0.8865502230713337,
+      "final_over_initial_loss": 8.252880494418362e-05,
+      "max_sqrt_width_per_neuron_drift": 4.39283391618266,
+      "max_jacobian_drift_over_initial_sqrt_gap": 247.73887258282213,
+      "gap_preserved_at_saved_checkpoints": 9,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "width": 64,
+      "runs": 30,
+      "initial_reference_error_operator": 0.09842170978048301,
+      "max_kernel_drift_operator": 0.10053551492620899,
+      "final_relative_error_to_frozen_dynamics": 0.5597353049233118,
+      "final_over_initial_loss": 0.00010120878208077754,
+      "max_sqrt_width_per_neuron_drift": 5.185476466151508,
+      "max_jacobian_drift_over_initial_sqrt_gap": 64.46401268717777,
+      "gap_preserved_at_saved_checkpoints": 27,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "width": 256,
+      "runs": 30,
+      "initial_reference_error_operator": 0.04202662376965845,
+      "max_kernel_drift_operator": 0.026355746228273167,
+      "final_relative_error_to_frozen_dynamics": 0.24740339294985333,
+      "final_over_initial_loss": 0.00011148230577147678,
+      "max_sqrt_width_per_neuron_drift": 6.122085182056479,
+      "max_jacobian_drift_over_initial_sqrt_gap": 29.743174697536347,
+      "gap_preserved_at_saved_checkpoints": 30,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "width": 1024,
+      "runs": 30,
+      "initial_reference_error_operator": 0.017030180967244332,
+      "max_kernel_drift_operator": 0.007077401761778861,
+      "final_relative_error_to_frozen_dynamics": 0.0785359622348426,
+      "final_over_initial_loss": 0.00012586650561512852,
+      "max_sqrt_width_per_neuron_drift": 6.879345029342795,
+      "max_jacobian_drift_over_initial_sqrt_gap": 13.620690192782746,
+      "gap_preserved_at_saved_checkpoints": 30,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "width": 4096,
+      "runs": 30,
+      "initial_reference_error_operator": 0.011998468386238595,
+      "max_kernel_drift_operator": 0.0018126155608577444,
+      "final_relative_error_to_frozen_dynamics": 0.020475220513461116,
+      "final_over_initial_loss": 0.00014852802436121984,
+      "max_sqrt_width_per_neuron_drift": 6.789502606564655,
+      "max_jacobian_drift_over_initial_sqrt_gap": 6.981261470717298,
+      "gap_preserved_at_saved_checkpoints": 30,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "width": 16384,
+      "runs": 30,
+      "initial_reference_error_operator": 0.0058511538446745,
+      "max_kernel_drift_operator": 0.0004785313866792509,
+      "final_relative_error_to_frozen_dynamics": 0.006102133654269003,
+      "final_over_initial_loss": 0.00012368956494431015,
+      "max_sqrt_width_per_neuron_drift": 7.448549899703052,
+      "max_jacobian_drift_over_initial_sqrt_gap": 3.3686267611106393,
+      "gap_preserved_at_saved_checkpoints": 30,
+      "informative_jacobian_bound_at_saved_checkpoints": 0
+    }
+  ],
+  "rank_tolerance_sensitivity": [
+    {
+      "relative_tolerance": 1e-14,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    },
+    {
+      "relative_tolerance": 1e-12,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    },
+    {
+      "relative_tolerance": 1e-10,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    },
+    {
+      "relative_tolerance": 1e-08,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    }
+  ],
+  "checkpoint_scope": "Gap, Jacobian-drift, kernel-drift, and neuron-motion maxima are over saved checkpoints, not every GD iterate.",
+  "per_problem": [
+    {
+      "problem": "poisson_1d",
+      "loss_ratio_width16": 7.582046353696887e-32,
+      "loss_ratio_width16384": 4.617068137960174e-06,
+      "solution_grid_relative_l2_width16384": 0.001284637043357727,
+      "concentration_slope_width_ge64": -0.5051123770806489,
+      "neuron_motion_slope_width_ge256": -0.33295411410640635
+    },
+    {
+      "problem": "variable_elliptic_2d",
+      "loss_ratio_width16": 6.807212365012648e-05,
+      "loss_ratio_width16384": 6.91255587373854e-08,
+      "solution_grid_relative_l2_width16384": 0.07171960860920384,
+      "concentration_slope_width_ge64": -0.47478648541205287,
+      "neuron_motion_slope_width_ge256": -0.4447145597528403
+    },
+    {
+      "problem": "heat_1d",
+      "loss_ratio_width16": 0.000120441758889946,
+      "loss_ratio_width16384": 0.00018853322776962028,
+      "solution_grid_relative_l2_width16384": 0.010180396592095138,
+      "concentration_slope_width_ge64": -0.49280898182332816,
+      "neuron_motion_slope_width_ge256": -0.4416366546440055
+    },
+    {
+      "problem": "transport_1d",
+      "loss_ratio_width16": 5.6851900907606676e-05,
+      "loss_ratio_width16384": 6.218057323065553e-05,
+      "solution_grid_relative_l2_width16384": 0.013476980203951563,
+      "concentration_slope_width_ge64": -0.4868067513222227,
+      "neuron_motion_slope_width_ge256": -0.4212353051392132
+    },
+    {
+      "problem": "wave_1d",
+      "loss_ratio_width16": 0.00018853747571365547,
+      "loss_ratio_width16384": 0.00020689615374164914,
+      "solution_grid_relative_l2_width16384": 0.017072488658005137,
+      "concentration_slope_width_ge64": -0.492092707821936,
+      "neuron_motion_slope_width_ge256": -0.39212634783023753
+    },
+    {
+      "problem": "biharmonic_2d",
+      "loss_ratio_width16": 0.006737196133572987,
+      "loss_ratio_width16384": 0.0052223681759855185,
+      "solution_grid_relative_l2_width16384": 0.13379109113467202,
+      "concentration_slope_width_ge64": -0.4693437948027006,
+      "neuron_motion_slope_width_ge256": -0.453760577318778
+    },
+    {
+      "problem": "stokes_2d",
+      "loss_ratio_width16": 0.0005140827601001451,
+      "loss_ratio_width16384": 0.0004482561176249715,
+      "solution_grid_relative_l2_width16384": 0.07955821642711106,
+      "concentration_slope_width_ge64": -0.5120278987968813,
+      "neuron_motion_slope_width_ge256": -0.45473028032066565
+    },
+    {
+      "problem": "weak_poisson_1d",
+      "loss_ratio_width16": 1.018667488876414e-05,
+      "loss_ratio_width16384": 9.767610453768265e-05,
+      "solution_grid_relative_l2_width16384": 0.0031872937198979033,
+      "concentration_slope_width_ge64": -0.5058385241574911,
+      "neuron_motion_slope_width_ge256": -0.43560500217584686
+    },
+    {
+      "problem": "nonlocal_diffusion_1d",
+      "loss_ratio_width16": 5.715082950901695e-05,
+      "loss_ratio_width16384": 2.293671180887894e-05,
+      "solution_grid_relative_l2_width16384": 0.04036188897086489,
+      "concentration_slope_width_ge64": -0.5074620293128552,
+      "neuron_motion_slope_width_ge256": -0.5128735003526338
+    },
+    {
+      "problem": "integro_diff_1d",
+      "loss_ratio_width16": 9.733782722533629e-05,
+      "loss_ratio_width16384": 0.00012368956494431015,
+      "solution_grid_relative_l2_width16384": 0.002442311264368169,
+      "concentration_slope_width_ge64": -0.511453060011614,
+      "neuron_motion_slope_width_ge256": -0.4493222341883068
+    },
+    {
+      "problem": "caputo_diffusion_1d",
+      "loss_ratio_width16": 0.0001311896507594223,
+      "loss_ratio_width16384": 0.0012836422950653953,
+      "solution_grid_relative_l2_width16384": 0.034631707132428254,
+      "concentration_slope_width_ge64": -0.4896947146338665,
+      "neuron_motion_slope_width_ge256": -0.43406071484002556
+    }
+  ],
+  "conditioning_groups": [
+    {
+      "family": "nonlocal_boundary",
+      "width": 16,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0011903495745667595,
+          "loss_ratio": 1.9845151096652788e-13
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 1.438392467182657e-05,
+          "loss_ratio": 0.4082874942093173
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 1.454316487697339e-07,
+          "loss_ratio": 0.43945597785207835
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "nonlocal_boundary",
+      "width": 256,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.001332824462458643,
+          "loss_ratio": 0.0003325677578543288
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 1.645023352010024e-05,
+          "loss_ratio": 0.28042074227964753
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 1.668622832401029e-07,
+          "loss_ratio": 0.29693206403219397
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "nonlocal_boundary",
+      "width": 4096,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0013458070387817296,
+          "loss_ratio": 0.005861270624801125
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 1.6649459165377235e-05,
+          "loss_ratio": 0.19814710569939645
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 1.6894348226682616e-07,
+          "loss_ratio": 0.2103149528325648
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "nonlocal_boundary",
+      "width": 16384,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0013436454187895955,
+          "loss_ratio": 0.012100428761998766
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 1.6627595365677384e-05,
+          "loss_ratio": 0.3509206260133975
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 1.687292701678587e-07,
+          "loss_ratio": 0.37102124550661053
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "width": 16,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0038516714028983424,
+          "loss_ratio": 0.9113949804496877
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 2.3389237830933223e-05,
+          "loss_ratio": 5.055760058382655e-12
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 1.9649421181641968e-07,
+          "loss_ratio": 0.864495352144604
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": false
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "width": 256,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.004016308830406495,
+          "loss_ratio": 3.703070359331605e-32
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 2.4475297885271007e-05,
+          "loss_ratio": 4.201799413325565e-06
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.0486015635745582e-07,
+          "loss_ratio": 0.9248170490416754
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "width": 4096,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0038753516113332574,
+          "loss_ratio": 1.2630112577444623e-30
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 2.361236800549119e-05,
+          "loss_ratio": 0.020084581827411678
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 1.9766821070208755e-07,
+          "loss_ratio": 0.8971964378896643
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "width": 16384,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0038705606991327715,
+          "loss_ratio": 6.027664436973577e-30
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 2.3586104364927894e-05,
+          "loss_ratio": 0.5925499438664013
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 1.974253872749479e-07,
+          "loss_ratio": 0.932889404851244
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "pointwise_poisson",
+      "width": 16,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0777912445137311,
+          "loss_ratio": 6.235711378307119e-33
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0028814899391929197,
+          "loss_ratio": 8.349194953228091e-12
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 3.3041981133110985e-05,
+          "loss_ratio": 0.10613341563779498
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "pointwise_poisson",
+      "width": 256,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.08833589766673193,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0025455729353895153,
+          "loss_ratio": 8.41420903904147e-06
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.8228520998567095e-05,
+          "loss_ratio": 0.13069455890765394
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "pointwise_poisson",
+      "width": 4096,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0879632414484216,
+          "loss_ratio": 2.1895142536507957e-31
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0024173665213376625,
+          "loss_ratio": 0.0003752855647592896
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.6695394728537e-05,
+          "loss_ratio": 0.15894622446497905
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "pointwise_poisson",
+      "width": 16384,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.08777658978603277,
+          "loss_ratio": 8.027322381648843e-31
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0024158522567237738,
+          "loss_ratio": 0.00041745274067011147
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.6670704519112337e-05,
+          "loss_ratio": 0.17312564280154474
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "vector_stokes",
+      "width": 16,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.17272564761826803,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0028220834272569004,
+          "loss_ratio": 4.578780286854431e-10
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.8716318068858067e-05,
+          "loss_ratio": 0.7028710670079672
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "vector_stokes",
+      "width": 256,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.20121470707784245,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0026423766450003666,
+          "loss_ratio": 1.6294148278896437e-07
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.607113939532709e-05,
+          "loss_ratio": 0.9047264238298852
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "vector_stokes",
+      "width": 4096,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.2020507906832294,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0026810684325107533,
+          "loss_ratio": 0.0005453707917334224
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.6500642756778713e-05,
+          "loss_ratio": 0.8223059653119824
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "vector_stokes",
+      "width": 16384,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.2036871862879117,
+          "loss_ratio": 5.224615150427785e-32
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0026652842117563785,
+          "loss_ratio": 0.0010980139519970041
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.6368198511428713e-05,
+          "loss_ratio": 0.7996642258651916
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_boundary",
+      "width": 16,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.23813758615727476,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0031650389430906696,
+          "loss_ratio": 1.0831972170922537e-23
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 3.11103512955713e-05,
+          "loss_ratio": 0.3525193252894858
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_boundary",
+      "width": 256,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.2540136191622551,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0030772293257653816,
+          "loss_ratio": 3.7815794198898496e-08
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 2.989590153033958e-05,
+          "loss_ratio": 0.2899515607403431
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_boundary",
+      "width": 4096,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.27105438860839337,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0032809487118454607,
+          "loss_ratio": 2.5481538341142896e-05
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 3.177287268222701e-05,
+          "loss_ratio": 0.20464854592137097
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_boundary",
+      "width": 16384,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.2703431956306972,
+          "loss_ratio": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0033012414938181794,
+          "loss_ratio": 0.0001041489686440025
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 3.195244135152278e-05,
+          "loss_ratio": 0.3696302249043255
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_poisson",
+      "width": 16,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.03232366167921819,
+          "loss_ratio": 6.220030625488264e-32
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0004148836100028081,
+          "loss_ratio": 5.651938919046005e-05
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 4.212547106494908e-06,
+          "loss_ratio": 0.1674358963884375
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_poisson",
+      "width": 256,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.05133324599929952,
+          "loss_ratio": 2.140013685870264e-31
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0006145249065993845,
+          "loss_ratio": 8.501951372538703e-05
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 6.1588434012188695e-06,
+          "loss_ratio": 0.19538904947453675
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_poisson",
+      "width": 4096,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.0505818337985271,
+          "loss_ratio": 1.3774278700019167e-29
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0006030794659369175,
+          "loss_ratio": 0.029611230086215076
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 6.041273118208303e-06,
+          "loss_ratio": 0.28638232521226775
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    },
+    {
+      "family": "weak_poisson",
+      "width": 16384,
+      "levels": [
+        {
+          "epsilon": 1.0,
+          "relative_gap": 0.050069079593652366,
+          "loss_ratio": 6.554353389330828e-29
+        },
+        {
+          "epsilon": 0.1,
+          "relative_gap": 0.0005948685013519068,
+          "loss_ratio": 0.059339217906481806
+        },
+        {
+          "epsilon": 0.01,
+          "relative_gap": 5.9564377919528755e-06,
+          "loss_ratio": 0.3413086258869246
+        }
+      ],
+      "gap_ordered": true,
+      "loss_ordered": true
+    }
+  ],
+  "gap_ordered_groups": 24,
+  "loss_ordered_groups": 23,
+  "same_kernel_targets": [
+    {
+      "family": "pointwise_poisson",
+      "paired_initial_eigenvalues_identical": true,
+      "lambda_min": 8.848528942548284e-06,
+      "manufactured_loss_ratio": 1.0242637571893862e-06,
+      "compatible_contrast_loss_ratio": 0.17312564280154474
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "paired_initial_eigenvalues_identical": true,
+      "lambda_min": 1.7842148153889015e-09,
+      "manufactured_loss_ratio": 2.0141287702249548e-07,
+      "compatible_contrast_loss_ratio": 0.932889404851244
+    }
+  ],
+  "widest_kernel_norm_bound_positive": 0,
+  "inconclusive_qmc": [
+    "heat_1d",
+    "transport_1d",
+    "wave_1d",
+    "biharmonic_2d",
+    "caputo_diffusion_1d"
+  ]
+}

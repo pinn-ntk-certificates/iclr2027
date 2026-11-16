@@ -16,6 +16,8 @@ experiments/theorem_audit/results/**/figures/
 !experiments/theorem_audit/results/width_requirement/width_requirement_summary.json
 !experiments/theorem_audit/results/weak_direction_share/weak_direction_share_summary.json
 !experiments/theorem_audit/results/depth_variation/depth_variation_summary.json
+!experiments/theorem_audit/results/campaign_cluster_20261115/**/*.json
+!experiments/theorem_audit/results/campaign_cluster_20261115/**/figures/
 
 # Editors and operating systems
 .vscode/

@@ -1,6 +1,6 @@
 {
   "aggregate_input": "experiments/theorem_audit/data/compatible_rank_convergence_conditioning.json",
-  "aggregate_input_sha256": "c887a65bcab08e57b50319c798a849029cda97781797ce42d7a47d27ac64f6c6",
+  "aggregate_input_sha256": "2f6110ec2a759f47e57c8400afb4e849ec3d4f74932a6a53b1a6c4b853e0e363",
   "all_targets_functionally_compatible": true,
   "analysis_script": "experiments/theorem_audit/plot_supportive_evidence.py",
   "analysis_script_sha256": "c282cda9700b1b998ab794a94264595052df1940e9997c3408d31f345979cbf3",
@@ -14,21 +14,21 @@
   ],
   "outputs": {
     "pdf": {
-      "bytes": 36728,
+      "bytes": 36734,
       "path": "figures/compatible_rank_convergence_conditioning.pdf",
-      "sha256": "707cf48b63f8b1e957e68978775994763fecc4afac3d1d36336edaf674fa753c"
+      "sha256": "b6a8bb5a3f0a595e40add4ad4f5fbebb55c1c6ddf51110f8ab0d787a8555f564"
     },
     "png": {
-      "bytes": 191131,
+      "bytes": 190723,
       "path": "figures/compatible_rank_convergence_conditioning.png",
-      "sha256": "1e526dd90e098612952c85f6772fb66e6bac720ae5be1fdcca2ecf8b6b1e0a84"
+      "sha256": "486b0a12ec7f1eb31372bfec40ee1104082a7680d9f15b7b848e1d04d6a3dcda"
     }
   },
   "plotted_statistics": "validated counts and five-seed medians",
   "raw_source": {
     "description": "Validated compatible-only control table",
     "rows": 1080,
-    "sha256": "4fdb41f09e137ea6c0576586f3dacfabb01cb5b5f2a5e87bc23717b87681eabe"
+    "sha256": "136d636a62f2931a46eb3e211127c8f725a34ec40d264729cbc7f45f3ff7a19b"
   },
   "schema_version": 5,
   "summary": {
@@ -47,29 +47,29 @@
           "runs": 5
         },
         "1": {
-          "median_final_to_initial_loss_ratio": 0.012100428761998839,
-          "median_initial_condition_number": 744.2439694401194,
-          "median_relative_gap": 0.0013436454187895953,
+          "median_final_to_initial_loss_ratio": 0.012100428761998766,
+          "median_initial_condition_number": 744.2439694401193,
+          "median_relative_gap": 0.0013436454187895955,
           "runs": 5
         }
       },
       "nonlocal_diffusion": {
         "0.01": {
           "median_final_to_initial_loss_ratio": 0.932889404851244,
-          "median_initial_condition_number": 5065204.699953142,
-          "median_relative_gap": 1.974253873706725e-07,
+          "median_initial_condition_number": 5065204.70240908,
+          "median_relative_gap": 1.974253872749479e-07,
           "runs": 5
         },
         "0.1": {
-          "median_final_to_initial_loss_ratio": 0.5925499438663997,
-          "median_initial_condition_number": 42397.84512746847,
-          "median_relative_gap": 2.358610436434954e-05,
+          "median_final_to_initial_loss_ratio": 0.5925499438664013,
+          "median_initial_condition_number": 42397.84512642884,
+          "median_relative_gap": 2.3586104364927894e-05,
           "runs": 5
         },
         "1": {
-          "median_final_to_initial_loss_ratio": 6.362160325588183e-30,
-          "median_initial_condition_number": 258.3605006437551,
-          "median_relative_gap": 0.003870560699132828,
+          "median_final_to_initial_loss_ratio": 6.027664436973577e-30,
+          "median_initial_condition_number": 258.3605006437588,
+          "median_relative_gap": 0.0038705606991327715,
           "runs": 5
         }
       },
@@ -156,35 +156,35 @@
     },
     "width_diagnostics": {
       "16": {
-        "final_frozen_trajectory_discrepancy": 0.908,
+        "final_frozen_trajectory_discrepancy": 0.9075705845720827,
         "gap_retained_at_saved_checkpoints": 17,
         "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.611,
-        "median_initial_relative_kernel_error": 0.223
+        "maximum_relative_kernel_drift": 0.6110740189021455,
+        "median_initial_relative_kernel_error": 0.2225773715821683
       },
       "16384": {
-        "final_frozen_trajectory_discrepancy": 0.00691,
+        "final_frozen_trajectory_discrepancy": 0.0069107960995547805,
         "gap_retained_at_saved_checkpoints": 110,
         "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.000862,
-        "median_initial_relative_kernel_error": 0.00809
+        "maximum_relative_kernel_drift": 0.0008624446027554523,
+        "median_initial_relative_kernel_error": 0.008088298453624566
       },
       "256": {
-        "final_frozen_trajectory_discrepancy": 0.274,
+        "final_frozen_trajectory_discrepancy": 0.27416507161094983,
         "gap_retained_at_saved_checkpoints": 110,
         "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.0484,
-        "median_initial_relative_kernel_error": 0.0546
+        "maximum_relative_kernel_drift": 0.04837930576510355,
+        "median_initial_relative_kernel_error": 0.05459300958815928
       },
       "4096": {
-        "final_frozen_trajectory_discrepancy": 0.0225,
+        "final_frozen_trajectory_discrepancy": 0.0225013847327422,
         "gap_retained_at_saved_checkpoints": 110,
         "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.00333,
-        "median_initial_relative_kernel_error": 0.0156
+        "maximum_relative_kernel_drift": 0.0033348858920251843,
+        "median_initial_relative_kernel_error": 0.015617294461268843
       },
       "provenance": {
-        "description": "Frozen aggregates copied from theorem_audit_results.tex, table completed_width_results",
+        "description": "Pooled medians over the 110 completed training runs per width in results/broad/findings.json of the frozen campaign; displayed as table completed_width_results of the manuscript",
         "pde_systems": 11,
         "runs_per_width": 110
       }

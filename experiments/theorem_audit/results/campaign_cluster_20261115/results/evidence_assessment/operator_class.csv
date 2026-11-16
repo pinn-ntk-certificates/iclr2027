@@ -1,0 +1,4 @@
+operator_class,problems,runs,endpoint_loss_reduced,endpoint_loss_reduced_10x
+classical_local,poisson_1d;variable_elliptic_2d;heat_1d;transport_1d;wave_1d;biharmonic_2d;stokes_2d,490,490,487
+weak_variational,weak_poisson_1d,70,70,70
+integral_nonlocal,nonlocal_diffusion_1d;integro_diff_1d;caputo_diffusion_1d,210,210,210

@@ -1,0 +1,27 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,booktabs,hyperref}
+\begin{document}
+\section*{Compatible-target rank and conditioning results}
+Completed 1080/1080 compatible controls: 600 manufactured-target runs and 480 compatible contrast-target runs. Every reported target is functionally compatible. This reporting overlay reuses the original completed trajectories.
+
+For duplicate rows $\ell_1=\ell_2$ with equal targets, the normalized residual lies in the range of the rank-one kernel. All 120 retained duplicate-row runs use manufactured targets; 118 reached $L_T<10^{-12}$. Singularity therefore does not preclude convergence for these compatible targets.
+
+The loss is $L(\theta)=\sum_{i=1}^2(\ell_i[u_\theta]-y_i)^2$. Full-batch gradient descent uses $\theta_{t+1}=\theta_t-2\eta J_t^\top e_t$, with $\eta=0.2/\lambda_{\max}(K_0)$. Frozen dynamics satisfy $e_{t+1}=(I-2\eta K_0)e_t$. A frozen eigenmode with eigenvalue $\lambda>0$ has squared-loss factor $(1-2\eta\lambda)^2$; smaller gaps permit slower convergence.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Row mixing & Runs & Median $\lambda_{\min}(K_0)$ & Median $L_T/L_0$\\
+\midrule
+Independent & 30 & 0.10511 & 1.53263e-31 \\
+1 & 30 & 0.035472 & 3.54223e-30 \\
+0.1 & 30 & 0.00068762 & 0.0100731 \\
+0.01 & 30 & 7.12189e-06 & 0.40002 \\
+\bottomrule
+\end{tabular}
+\end{center}
+The table pools compatible contrast targets across 6 functional families at width 16384, after 3,000 full-batch GD steps. Pooled medians are descriptive; they are not a common spectral constant or confidence interval. Use the family-specific figures and detailed captions for comparisons. Positive mixing parameters give independent rows and admit the contrast targets, which need not be targets of the original manufactured PDE solution.
+
+These two-row controls measure constraint optimization, not held-out PDE accuracy. Initial positive definiteness and finite numerical training do not verify the theorem's existential width or step-size constants. The compatible selection and source-artifact hashes are recorded in the accompanying JSON provenance; all plotted and tabulated targets are compatible.
+\end{document}

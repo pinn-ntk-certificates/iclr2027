@@ -211,11 +211,16 @@ theorem's deterministic sufficient bounds.
 Regenerate the two-panel main-text figure with:
 
 ```bash
+uv run python experiments/theorem_audit/build_figure_aggregate.py
 uv run python experiments/theorem_audit/plot_supportive_evidence.py
 ```
 
-The plotting command validates the tracked aggregate in
-`data/compatible_rank_convergence_conditioning.json`, then writes the PDF, PNG,
+The builder derives the tracked aggregate
+`data/compatible_rank_convergence_conditioning.json` from the frozen campaign
+`results/campaign_cluster_20261115/` (its `results/broad/findings.json` and
+`results/controls_compatible/runs.csv`); `--check` compares the tracked file
+with a rebuild and `--campaign DIR` points it at another campaign. The
+plotting command validates that aggregate, then writes the PDF, PNG,
 and a JSON provenance record to
 `figures/compatible_rank_convergence_conditioning.*`. The aggregate contains
 the displayed counts and five-seed medians and records the SHA256 of the
@@ -227,11 +232,13 @@ color and line style and the prescribed row-mixing parameter $\varepsilon$ by
 marker shape. The horizontal coordinate is the measured condition number
 $\kappa_0$, not $\varepsilon$.
 
-The compatible-control aggregate cannot reconstruct individual histories. Rerun `campaign.py` to
-regenerate raw histories and the full compatible-control source table.
+The per-run records behind the aggregate (one JSON record and one NPZ history
+per run) belong to `results/campaign_cluster_20261115/` and are released with
+the code as described in [`CAMPAIGN_STATUS.md`](CAMPAIGN_STATUS.md). Rerun
+`campaign.py` from the same configuration to regenerate them.
 
-Regression-test the plotted counts, medians, layout, and minimum text size with:
+Regression-test the builder and the plotted counts, medians, layout, and minimum text size with:
 
 ```bash
-uv run python -m unittest experiments.theorem_audit.test_plot_supportive_evidence
+uv run python -m unittest experiments.theorem_audit.test_build_figure_aggregate experiments.theorem_audit.test_plot_supportive_evidence
 ```

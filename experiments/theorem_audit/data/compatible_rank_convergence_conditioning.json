@@ -1,52 +1,18 @@
 {
-  "schema_version": 1,
-  "description": "Frozen aggregate values used by the manuscript's finite-width GD evidence figure.",
-  "raw_source": {
-    "description": "Validated compatible-only control table",
-    "rows": 1080,
-    "sha256": "4fdb41f09e137ea6c0576586f3dacfabb01cb5b5f2a5e87bc23717b87681eabe"
-  },
+  "description": "Figure-level aggregate of the manuscript's finite-width GD evidence figure, computed from the frozen campaign records.",
   "panels": {
-    "width_diagnostics": {
-      "provenance": {
-        "description": "Frozen aggregates copied from theorem_audit_results.tex, table completed_width_results",
-        "pde_systems": 11,
-        "runs_per_width": 110
-      },
-      "16": {
-        "final_frozen_trajectory_discrepancy": 0.908,
-        "gap_retained_at_saved_checkpoints": 17,
-        "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.611,
-        "median_initial_relative_kernel_error": 0.223
-      },
-      "256": {
-        "final_frozen_trajectory_discrepancy": 0.274,
-        "gap_retained_at_saved_checkpoints": 110,
-        "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.0484,
-        "median_initial_relative_kernel_error": 0.0546
-      },
-      "4096": {
-        "final_frozen_trajectory_discrepancy": 0.0225,
-        "gap_retained_at_saved_checkpoints": 110,
-        "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.00333,
-        "median_initial_relative_kernel_error": 0.0156
-      },
-      "16384": {
-        "final_frozen_trajectory_discrepancy": 0.00691,
-        "gap_retained_at_saved_checkpoints": 110,
-        "gap_retained_denominator": 110,
-        "maximum_relative_kernel_drift": 0.000862,
-        "median_initial_relative_kernel_error": 0.00809
-      }
-    },
     "compatible_singular": {
       "16": {
         "final_loss_below_1e_minus_12": 28,
         "loss_reduced_at_least_100x": 30,
         "maximum_final_loss": 0.003894632860783275,
+        "median_final_loss": 0.0,
+        "runs": 30
+      },
+      "16384": {
+        "final_loss_below_1e_minus_12": 30,
+        "loss_reduced_at_least_100x": 30,
+        "maximum_final_loss": 2.465190328815662e-32,
         "median_final_loss": 0.0,
         "runs": 30
       },
@@ -61,13 +27,6 @@
         "final_loss_below_1e_minus_12": 30,
         "loss_reduced_at_least_100x": 30,
         "maximum_final_loss": 6.018531076210112e-34,
-        "median_final_loss": 0.0,
-        "runs": 30
-      },
-      "16384": {
-        "final_loss_below_1e_minus_12": 30,
-        "loss_reduced_at_least_100x": 30,
-        "maximum_final_loss": 2.465190328815662e-32,
         "median_final_loss": 0.0,
         "runs": 30
       }
@@ -87,29 +46,29 @@
           "runs": 5
         },
         "1": {
-          "median_final_to_initial_loss_ratio": 0.012100428761998839,
-          "median_initial_condition_number": 744.2439694401194,
-          "median_relative_gap": 0.0013436454187895953,
+          "median_final_to_initial_loss_ratio": 0.012100428761998766,
+          "median_initial_condition_number": 744.2439694401193,
+          "median_relative_gap": 0.0013436454187895955,
           "runs": 5
         }
       },
       "nonlocal_diffusion": {
         "0.01": {
           "median_final_to_initial_loss_ratio": 0.932889404851244,
-          "median_initial_condition_number": 5065204.699953142,
-          "median_relative_gap": 1.974253873706725e-07,
+          "median_initial_condition_number": 5065204.70240908,
+          "median_relative_gap": 1.974253872749479e-07,
           "runs": 5
         },
         "0.1": {
-          "median_final_to_initial_loss_ratio": 0.5925499438663997,
-          "median_initial_condition_number": 42397.84512746847,
-          "median_relative_gap": 2.358610436434954e-05,
+          "median_final_to_initial_loss_ratio": 0.5925499438664013,
+          "median_initial_condition_number": 42397.84512642884,
+          "median_relative_gap": 2.3586104364927894e-05,
           "runs": 5
         },
         "1": {
-          "median_final_to_initial_loss_ratio": 6.362160325588183e-30,
-          "median_initial_condition_number": 258.3605006437551,
-          "median_relative_gap": 0.003870560699132828,
+          "median_final_to_initial_loss_ratio": 6.027664436973577e-30,
+          "median_initial_condition_number": 258.3605006437588,
+          "median_relative_gap": 0.0038705606991327715,
           "runs": 5
         }
       },
@@ -193,8 +152,59 @@
           "runs": 5
         }
       }
+    },
+    "width_diagnostics": {
+      "16": {
+        "final_frozen_trajectory_discrepancy": 0.9075705845720827,
+        "gap_retained_at_saved_checkpoints": 17,
+        "gap_retained_denominator": 110,
+        "maximum_relative_kernel_drift": 0.6110740189021455,
+        "median_initial_relative_kernel_error": 0.2225773715821683
+      },
+      "16384": {
+        "final_frozen_trajectory_discrepancy": 0.0069107960995547805,
+        "gap_retained_at_saved_checkpoints": 110,
+        "gap_retained_denominator": 110,
+        "maximum_relative_kernel_drift": 0.0008624446027554523,
+        "median_initial_relative_kernel_error": 0.008088298453624566
+      },
+      "256": {
+        "final_frozen_trajectory_discrepancy": 0.27416507161094983,
+        "gap_retained_at_saved_checkpoints": 110,
+        "gap_retained_denominator": 110,
+        "maximum_relative_kernel_drift": 0.04837930576510355,
+        "median_initial_relative_kernel_error": 0.05459300958815928
+      },
+      "4096": {
+        "final_frozen_trajectory_discrepancy": 0.0225013847327422,
+        "gap_retained_at_saved_checkpoints": 110,
+        "gap_retained_denominator": 110,
+        "maximum_relative_kernel_drift": 0.0033348858920251843,
+        "median_initial_relative_kernel_error": 0.015617294461268843
+      },
+      "provenance": {
+        "description": "Pooled medians over the 110 completed training runs per width in results/broad/findings.json of the frozen campaign; displayed as table completed_width_results of the manuscript",
+        "pde_systems": 11,
+        "runs_per_width": 110
+      }
     }
   },
+  "provenance": {
+    "broad_config_sha256": "40d3cd0e88afdc023547f9e6014b7f0cfdf82439056bff1a346efedebf111106",
+    "builder": "experiments/theorem_audit/build_figure_aggregate.py",
+    "builder_sha256": "9ebd0b142eb5a0a674b5778daf170a08f304703fecf19f9c42ddb7860f0878a2",
+    "campaign": "experiments/theorem_audit/results/campaign_cluster_20261115",
+    "campaign_name": "extensive_20260907",
+    "controls_aggregate_sha256": "406db4c3109f20e6f931a28d896f6f17c90280b55f401a4ebbfd7c740d192c2a",
+    "controls_config_sha256": "65032b656575b3f4fb843ead8cb04abd080871911b834b43f7d42ab11c4072db",
+    "findings_sha256": "d562d7773ae43fbeb1d09d49318d016adc3197508c1cc5084e516ff50a934926"
+  },
+  "raw_source": {
+    "description": "Validated compatible-only control table",
+    "rows": 1080,
+    "sha256": "136d636a62f2931a46eb3e211127c8f725a34ec40d264729cbc7f45f3ff7a19b"
+  },
+  "schema_version": 1,
   "supporting_counts": {
     "compatible_singular": {
       "final_loss_below_1e_minus_12": 118,
@@ -209,7 +219,7 @@
       "manufactured_runs": 480,
       "runs": 960,
       "width_16384_loss_reduced": 240,
-      "width_16384_median_final_to_initial_loss_ratio": 6.89441442864108e-07,
+      "width_16384_median_final_to_initial_loss_ratio": 6.894414428640614e-07,
       "width_16384_runs": 240,
       "width_ge_256_loss_reduced": 720,
       "width_ge_256_runs": 720

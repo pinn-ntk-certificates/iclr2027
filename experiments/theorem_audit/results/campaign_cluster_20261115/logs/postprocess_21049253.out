@@ -1,0 +1,115 @@
+[rank-control aggregate] 1080/1080 compatible runs; experiments/theorem_audit/results/campaign_euler_20261115/results/controls_compatible/aggregate.json
+{
+  "coverage": {
+    "pde_runs": 770,
+    "compatible_controls": 1080,
+    "initializations": 7700
+  },
+  "rank": {
+    "distinct_kernel_instances": 600,
+    "independent_kernel_instances": 480,
+    "independent_rank2": 480,
+    "independent_Kout_positive": 480,
+    "singular_kernel_instances": 120,
+    "singular_rank1": 120
+  },
+  "rank_tolerance_sensitivity": [
+    {
+      "relative_tolerance": 1e-14,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    },
+    {
+      "relative_tolerance": 1e-12,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    },
+    {
+      "relative_tolerance": 1e-10,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    },
+    {
+      "relative_tolerance": 1e-08,
+      "independent_nonsingular": 480,
+      "independent_total": 480,
+      "duplicate_singular": 120,
+      "duplicate_total": 120
+    }
+  ],
+  "gd": {
+    "pde_loss_reduced": 770,
+    "pde_loss_reduced_10x": 767,
+    "positive_initial_ntk_runs": 960,
+    "positive_initial_ntk_loss_reduced": 959,
+    "manufactured_positive_initial_ntk_runs": 480,
+    "manufactured_positive_initial_ntk_loss_reduced_10x": 480,
+    "width_ge256_positive_initial_ntk_runs": 720,
+    "width_ge256_positive_initial_ntk_loss_reduced": 720,
+    "width16384_positive_initial_ntk_runs": 240,
+    "width16384_positive_initial_ntk_loss_reduced": 240,
+    "width16384_positive_initial_ntk_median_loss_ratio": 6.894414428640614e-07,
+    "compatible_singular_runs": 120,
+    "compatible_singular_loss_reduced_100x": 120,
+    "compatible_singular_loss_below_1e_minus12": 118,
+    "width_ge256_compatible_singular_runs": 90,
+    "width_ge256_compatible_singular_loss_below_1e_minus12": 90
+  },
+  "operator_class": [
+    {
+      "operator_class": "classical_local",
+      "problems": "poisson_1d;variable_elliptic_2d;heat_1d;transport_1d;wave_1d;biharmonic_2d;stokes_2d",
+      "runs": 490,
+      "endpoint_loss_reduced": 490,
+      "endpoint_loss_reduced_10x": 487
+    },
+    {
+      "operator_class": "weak_variational",
+      "problems": "weak_poisson_1d",
+      "runs": 70,
+      "endpoint_loss_reduced": 70,
+      "endpoint_loss_reduced_10x": 70
+    },
+    {
+      "operator_class": "integral_nonlocal",
+      "problems": "nonlocal_diffusion_1d;integro_diff_1d;caputo_diffusion_1d",
+      "runs": 210,
+      "endpoint_loss_reduced": 210,
+      "endpoint_loss_reduced_10x": 210
+    }
+  ],
+  "gap_ordered_groups": 24,
+  "loss_ordered_groups": 23,
+  "same_kernel_targets": [
+    {
+      "family": "pointwise_poisson",
+      "paired_initial_eigenvalues_identical": true,
+      "lambda_min": 8.848528942548284e-06,
+      "manufactured_loss_ratio": 1.0242637571893862e-06,
+      "compatible_contrast_loss_ratio": 0.17312564280154474
+    },
+    {
+      "family": "nonlocal_diffusion",
+      "paired_initial_eigenvalues_identical": true,
+      "lambda_min": 1.7842148153889015e-09,
+      "manufactured_loss_ratio": 2.0141287702249548e-07,
+      "compatible_contrast_loss_ratio": 0.932889404851244
+    }
+  ],
+  "widest_kernel_norm_bound_positive": 0,
+  "inconclusive_qmc": [
+    "heat_1d",
+    "transport_1d",
+    "wave_1d",
+    "biharmonic_2d",
+    "caputo_diffusion_1d"
+  ]
+}
+experiments/theorem_audit/results/campaign_euler_20261115/results/evidence_assessment
+[postprocess] done

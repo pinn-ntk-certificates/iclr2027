@@ -52,15 +52,15 @@ class SupportiveEvidencePlotTests(unittest.TestCase):
             width_diagnostics = summary["width_diagnostics"]
             self.assertAlmostEqual(
                 width_diagnostics["16"]["median_initial_relative_kernel_error"],
-                2.23e-1,
+                0.2225773715821683,
             )
             self.assertAlmostEqual(
                 width_diagnostics["16384"]["maximum_relative_kernel_drift"],
-                8.62e-4,
+                0.0008624446027554523,
             )
             self.assertAlmostEqual(
                 width_diagnostics["16384"]["final_frozen_trajectory_discrepancy"],
-                6.91e-3,
+                0.0069107960995547805,
             )
             self.assertEqual(
                 [

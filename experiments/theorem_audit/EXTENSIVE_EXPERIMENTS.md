@@ -1,16 +1,17 @@
 # Extensive empirical validation
 
-**The reported campaign is complete.** Read
-[CAMPAIGN_STATUS.md](CAMPAIGN_STATUS.md) for coverage and the distinction
-between the bundled aggregate and raw records that require regeneration.
+**The reported campaign is complete.** It is the campaign of 15 November 2026
+in `results/campaign_cluster_20261115/`; read
+[CAMPAIGN_STATUS.md](CAMPAIGN_STATUS.md) for coverage and for where the
+per-run records are.
 The validation protocol (`empirical_validation_protocol.tex` in the paper
 source) maps each experiment to the paper's results.
 
 The tracked
 [`data/compatible_rank_convergence_conditioning.json`](data/compatible_rank_convergence_conditioning.json)
-contains the counts and five-seed medians used by the manuscript figure. It
-also records the SHA256 of the validated 1080-row compatible-control source
-table; it does not purport to contain individual histories.
+contains the counts and five-seed medians used by the manuscript figure. It is
+built from the campaign directory by `build_figure_aggregate.py` and records
+the SHA256 of the validated 1080-row compatible-control source table.
 The separate tracked
 [`data/joint_nullspace_controls.json`](data/joint_nullspace_controls.json)
 contains the 36 paired compatible/incompatible trajectories and their saved
@@ -41,21 +42,45 @@ Run from the repository root with the locked environment:
 
 ```bash
 uv sync
+uv run python experiments/theorem_audit/build_figure_aggregate.py --check
 uv run python experiments/theorem_audit/plot_supportive_evidence.py
-uv run python -m unittest experiments.theorem_audit.test_plot_supportive_evidence
+uv run python -m unittest experiments.theorem_audit.test_build_figure_aggregate experiments.theorem_audit.test_plot_supportive_evidence
 ```
 
-This validates the compatible-control aggregate and regenerates the main-text
-PDF/PNG and its provenance JSON. Paths written to that JSON are repository-relative.
-Since summary statistics cannot reconstruct the original 1080 compatible-control
-trajectories, regenerating that full report requires a newly executed campaign:
+This checks the figure aggregate against the campaign, validates it, and
+regenerates the main-text PDF/PNG and its provenance JSON. Paths written to
+that JSON are repository-relative. The compatible-control report and the
+evidence assessment of the campaign are regenerated from its records with:
 
 ```bash
-CAMPAIGN=experiments/theorem_audit/results/campaign_compatible_new
+CAMPAIGN=experiments/theorem_audit/results/campaign_cluster_20261115
 uv run python -m experiments.theorem_audit.rank_controls_aggregate \
   --source-config "$CAMPAIGN/controls.json" \
   --output-dir "$CAMPAIGN/results/controls_compatible"
 ```
+
+## Per-run records of the frozen campaign
+
+The per-run records are release assets (see
+[CAMPAIGN_STATUS.md](CAMPAIGN_STATUS.md) for the hashes). Restore them with:
+
+```bash
+cd experiments/theorem_audit/results/campaign_cluster_20261115
+tar xzf /path/to/campaign_cluster_20261115_training_records.tar.gz
+tar xzf /path/to/campaign_cluster_20261115_control_records.tar.gz
+sha256sum -c RECORDS.sha256   # the two archive lines fail unless the archives are in this directory
+cd -
+```
+
+With the records in place, `campaign.py worker --directory
+experiments/theorem_audit/results/campaign_cluster_20261115 --kind aggregate
+--batch-size 1 --task-index 0` rebuilds `results/broad/findings.json`, the
+initialization aggregate and the control aggregate, and the two commands
+above rebuild the compatible-control report and the evidence assessment. On
+Windows set `PYTHONUTF8=1` first. The archives were built with
+`scripts/package_campaign_records.py` (development repository), which scans
+the records, checks their counts against the configuration and writes
+deterministic archives.
 
 ## Run a new campaign on a Slurm cluster
 
