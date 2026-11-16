@@ -1,9 +1,9 @@
 Matplotlib is building the font cache; this may take a moment.
 [aggregate] wrote tables/figures; accepted references=11/11, training statuses={'complete': 770}
 [initialization] accepted 7700/7700 measurements; 0 issues
-[rank-control aggregate] 1080/1080 compatible runs; experiments/theorem_audit/results/campaign_euler_20261115/results/controls/aggregate.json
+[rank-control aggregate] 1080/1080 compatible runs; experiments/theorem_audit/results/campaign_cluster_20261115/results/controls/aggregate.json
 {
-  "findings": "experiments/theorem_audit/results/campaign_euler_20261115/results/broad/findings.md",
+  "findings": "experiments/theorem_audit/results/campaign_cluster_20261115/results/broad/findings.md",
   "coverage": {
     "completed": 770,
     "expected": 770,

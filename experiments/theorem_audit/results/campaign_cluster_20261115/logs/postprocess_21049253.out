@@ -1,4 +1,4 @@
-[rank-control aggregate] 1080/1080 compatible runs; experiments/theorem_audit/results/campaign_euler_20261115/results/controls_compatible/aggregate.json
+[rank-control aggregate] 1080/1080 compatible runs; experiments/theorem_audit/results/campaign_cluster_20261115/results/controls_compatible/aggregate.json
 {
   "coverage": {
     "pde_runs": 770,
@@ -111,5 +111,5 @@
     "caputo_diffusion_1d"
   ]
 }
-experiments/theorem_audit/results/campaign_euler_20261115/results/evidence_assessment
+experiments/theorem_audit/results/campaign_cluster_20261115/results/evidence_assessment
 [postprocess] done

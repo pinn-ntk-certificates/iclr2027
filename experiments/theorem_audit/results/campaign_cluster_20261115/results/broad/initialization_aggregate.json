@@ -2,10 +2,10 @@
   "accepted_measurements": 7700,
   "config_hash": "93f8907b121f8baa0c2a20a461b30df6e42e34ded852de0ca308593bc753a689",
   "expected_measurements": 7700,
-  "figure_caption": "experiments/theorem_audit/results/campaign_euler_20261115/results/broad/figures/initialization_probability_caption.md",
+  "figure_caption": "experiments/theorem_audit/results/campaign_cluster_20261115/results/broad/figures/initialization_probability_caption.md",
   "figures": [
-    "experiments/theorem_audit/results/campaign_euler_20261115/results/broad/figures/initialization_probability.png",
-    "experiments/theorem_audit/results/campaign_euler_20261115/results/broad/figures/initialization_probability.pdf"
+    "experiments/theorem_audit/results/campaign_cluster_20261115/results/broad/figures/initialization_probability.png",
+    "experiments/theorem_audit/results/campaign_cluster_20261115/results/broad/figures/initialization_probability.pdf"
   ],
   "initialization_specification": {
     "nested_prefix": true,

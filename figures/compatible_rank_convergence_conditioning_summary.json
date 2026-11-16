@@ -1,6 +1,6 @@
 {
   "aggregate_input": "experiments/theorem_audit/data/compatible_rank_convergence_conditioning.json",
-  "aggregate_input_sha256": "2f6110ec2a759f47e57c8400afb4e849ec3d4f74932a6a53b1a6c4b853e0e363",
+  "aggregate_input_sha256": "21d3884aa6de47973620db3f424028bc8272c1ed51a2d52ccfe28633c54f2a8e",
   "all_targets_functionally_compatible": true,
   "analysis_script": "experiments/theorem_audit/plot_supportive_evidence.py",
   "analysis_script_sha256": "c282cda9700b1b998ab794a94264595052df1940e9997c3408d31f345979cbf3",
@@ -16,7 +16,7 @@
     "pdf": {
       "bytes": 36734,
       "path": "figures/compatible_rank_convergence_conditioning.pdf",
-      "sha256": "b6a8bb5a3f0a595e40add4ad4f5fbebb55c1c6ddf51110f8ab0d787a8555f564"
+      "sha256": "c8c323e595d555e0c0500d81f706cfa0f8434e2b8d3d3b9c6350444247d3443f"
     },
     "png": {
       "bytes": 190723,

@@ -195,9 +195,9 @@
     "builder_sha256": "9ebd0b142eb5a0a674b5778daf170a08f304703fecf19f9c42ddb7860f0878a2",
     "campaign": "experiments/theorem_audit/results/campaign_cluster_20261115",
     "campaign_name": "extensive_20260907",
-    "controls_aggregate_sha256": "406db4c3109f20e6f931a28d896f6f17c90280b55f401a4ebbfd7c740d192c2a",
+    "controls_aggregate_sha256": "943a1a155c58a281d8e5afbd65813a1ea21342d4dad71935da9a243371a035de",
     "controls_config_sha256": "65032b656575b3f4fb843ead8cb04abd080871911b834b43f7d42ab11c4072db",
-    "findings_sha256": "d562d7773ae43fbeb1d09d49318d016adc3197508c1cc5084e516ff50a934926"
+    "findings_sha256": "a2f9fca3de89ca6960d9743cb4a695b6ffdba9ab10d62042ba384b12fef8461b"
   },
   "raw_source": {
     "description": "Validated compatible-only control table",

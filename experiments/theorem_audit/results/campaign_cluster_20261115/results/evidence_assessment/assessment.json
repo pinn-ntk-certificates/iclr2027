@@ -1,9 +1,9 @@
 {
   "scope": "Completed runs only; all control targets functionally compatible; descriptive post-hoc analysis.",
   "input_sha256": {
-    "results/broad/findings.json": "929708a7a3ccd863200dd0d594fc3b7768882ba6f098b6230fbda0c96c21478d",
-    "results/broad/initialization_aggregate.json": "c4e3861d27cada98b18b7400b24c98b8825605b45d0b727912bbfda792fbb2dd",
-    "results/controls_compatible/aggregate.json": "c4eca8d433c7baae5e6252d793155294d54f2bcea026682fdc53fc5954c79713",
+    "results/broad/findings.json": "a2f9fca3de89ca6960d9743cb4a695b6ffdba9ab10d62042ba384b12fef8461b",
+    "results/broad/initialization_aggregate.json": "13529af9c1770f315c8d43669cefc52d579bf7650d0b041eb08e1db3360e9ec3",
+    "results/controls_compatible/aggregate.json": "943a1a155c58a281d8e5afbd65813a1ea21342d4dad71935da9a243371a035de",
     "results/controls_compatible/runs.csv": "136d636a62f2931a46eb3e211127c8f725a34ec40d264729cbc7f45f3ff7a19b"
   },
   "analysis_source_sha256": "fb6e0bb6edd34164bffe0a54b7e5a1e4a86a0a46f6f4529656fdbaabc8610a05",
@@ -1122,5 +1122,6 @@
     "wave_1d",
     "biharmonic_2d",
     "caputo_diffusion_1d"
-  ]
+  ],
+  "note_input_sha256": "input hashes refreshed after the campaign directory was renamed and its absolute provenance paths were made repository-relative; the analysis and every value are unchanged"
 }
