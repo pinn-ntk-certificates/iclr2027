@@ -187,7 +187,8 @@ in `experiments/theorem_audit/results/campaign_cluster_20261115/`: its
 configuration, snapshot, aggregates, compatible-control report and evidence
 assessment are tracked there. The per-run JSON records and NPZ histories
 (620 MB) are the release assets `campaign_cluster_20261115_training_records.tar.gz`
-and `campaign_cluster_20261115_control_records.tar.gz` of this repository;
+and `campaign_cluster_20261115_control_records.tar.gz` of release
+`campaign-records-20261115` of this repository;
 `RECORDS.sha256` in that directory lists their hashes and the hash of every
 file inside them, and `CAMPAIGN_STATUS.md` says how to restore and verify
 them. The tracked aggregate

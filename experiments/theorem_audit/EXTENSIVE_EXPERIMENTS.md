@@ -61,7 +61,7 @@ uv run python -m experiments.theorem_audit.rank_controls_aggregate \
 
 ## Per-run records of the frozen campaign
 
-The per-run records are release assets (see
+The per-run records are the assets of release `campaign-records-20261115` (see
 [CAMPAIGN_STATUS.md](CAMPAIGN_STATUS.md) for the hashes). Restore them with:
 
 ```bash

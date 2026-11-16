@@ -37,7 +37,8 @@ Tracked in the repository, inside `results/campaign_cluster_20261115/`:
   conditioning and rank-tolerance summaries.
 - `logs/`: the job scripts and the aggregate and post-processing logs.
 
-Published as release assets of the repository, outside the git history: the
+Published as assets of the release `campaign-records-20261115` of the repository, outside the
+git history: the
 per-run records, one JSON record and one NPZ history for each of the 770
 training runs (`results/broad/runs/<pde>/`) and 1,080 control runs
 (`results/controls/runs/`), the 11 references (`results/broad/references/`)
